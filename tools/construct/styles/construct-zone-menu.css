@@ -1,0 +1,12 @@
+.construct-zone-menu {
+  position: fixed;
+  z-index: 999999;
+
+  width: 148px;
+}
+
+.construct-zone-line-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+

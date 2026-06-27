@@ -1,0 +1,53 @@
+.app-header {
+  position: relative;
+  border-bottom: var(--border-thin) solid var(--border-default);
+  background: var(--site-header-bg, var(--bg-surface));
+  z-index: 100;
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 60px;
+  padding: 0 var(--space-lg);
+}
+
+.header-left {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.logo {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.logo-base {
+  color: var(--text-primary);
+}
+
+.logo-core {
+  margin-left: 2px;
+  color: var(--accent-primary);
+}
+
+.logo-separator {
+  margin-left: 4px;
+  color: var(--text-primary);
+}
+
+.logo-tool {
+  margin-left: 2px;
+  color: var(--text-secondary);
+}
+
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  gap: 2px;
+}

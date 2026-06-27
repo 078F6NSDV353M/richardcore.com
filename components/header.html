@@ -1,0 +1,29 @@
+<header class="app-header">
+  <div class="header-inner">
+    <div class="header-left">
+      <span class="logo"></span>
+
+      <nav class="nav">
+        <a data-route="home" class="nav-link">Home</a>
+        <a data-route="about" class="nav-link">About</a>
+        <a data-route="contacts" class="nav-link">Contacts</a>
+
+        <div class="nav-dropdown">
+          <a data-route="tools" class="nav-link">Tools</a>
+          <div class="dropdown-menu" id="tools-menu"></div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="header-right">
+      <button
+        id="theme-toggle"
+        class="button theme-toggle-button"
+        aria-label="Toggle theme"
+      >
+        <i data-lucide="moon"></i>
+      </button>
+      <span id="utc-clock"></span>
+    </div>
+  </div>
+</header>

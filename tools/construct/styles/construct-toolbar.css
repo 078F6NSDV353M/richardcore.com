@@ -1,0 +1,83 @@
+/* === Toolbar === */
+
+.construct-toolbar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: var(--construct-toolbar-width);
+  height: 100%;
+  z-index: 100;
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 16px;
+
+  background: var(--construct-bg-toolbar);
+  border-left: 1px solid var(--border-default);
+
+  transition: transform var(--transition-fast);
+}
+
+.construct-toolbar.is-closed {
+  transform: translateX(100%);
+}
+
+.construct-toolbar-toggle {
+  position: absolute;
+  top: 40px;
+  left: calc(-1 * var(--construct-toolbar-toggle-width));
+  width: var(--construct-toolbar-toggle-width);
+  height: var(--construct-toolbar-toggle-height);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid var(--border-default);
+  border-right: none;
+  border-radius: var(--radius-sm) 0 0 var(--radius-sm);
+
+  background: var(--construct-bg-toolbar);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+.construct-toolbar-toggle-icon {
+  font-size: 18px;
+  line-height: 1;
+}
+
+.construct-toolbar.is-closed .construct-toolbar-toggle-icon {
+  transform: rotate(180deg);
+}
+
+.construct-add-node-button {
+  width: 100%;
+}
+
+
+/* === Fullscreen button === */
+
+.construct-fullscreen-toggle {
+  position: absolute;
+  top: 0;
+  left: calc(-1 * var(--construct-toolbar-toggle-width));
+  width: var(--construct-toolbar-toggle-width);
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+  border: none;
+  border-radius: 0;
+
+  color: var(--text-primary);
+  cursor: pointer;
+  z-index: 101;
+  padding: 0;
+}

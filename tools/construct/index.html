@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" data-tool-slug="construct">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ConStruct / Tools / Richard&lt;CORE&gt;</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../../styles/base/tokens.css" />
+  <link rel="stylesheet" href="../../styles/base/themes.css" />
+  <link rel="stylesheet" href="../../styles/style.css" />
+  <link rel="stylesheet" href="./construct-tool.css" />
+</head>
+<body>
+  <div id="header-root"></div>
+
+  <main>
+    <div class="app-container">
+      <div class="construct-page-shell">
+        <div class="construct-stage">
+
+          <div class="construct-background"></div>
+          <div class="construct-grid"></div>
+          <div class="construct-world">
+
+            <div class="construct-zones"></div>
+
+            <div class="construct-groups"></div>
+
+            <svg class="construct-connections" aria-hidden="true"></svg>
+
+            <div class="construct-nodes"></div>
+
+          </div>
+
+          <div class="construct-connection-menu"></div>
+          <div class="construct-connection-floating-submenu"></div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script src="https://cdn.jsdelivr.net/npm/html-to-image@1.11.11/dist/html-to-image.min.js"></script>
+  <script type="module" src="../../main.js"></script>
+  <script type="module" src="./construct-tool.js"></script>
+</body>
+</html>

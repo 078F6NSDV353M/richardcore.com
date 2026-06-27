@@ -1,0 +1,462 @@
+html[data-tool-slug="construct"],
+html[data-tool-slug="construct"] body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  overscroll-behavior: none;
+}
+
+html[data-tool-slug="construct"] body {
+  position: fixed;
+  inset: 0;
+}
+
+html[data-tool-slug="construct"] main {
+  width: 100%;
+  height: calc(100vh - var(--site-header-height, 0px) - var(--site-footer-height, 0px));
+  min-height: 0;
+  overflow: hidden;
+}
+
+html[data-tool-slug="construct"] .app-container {
+  height: 100%;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* === Layout === */
+
+.construct-page-shell {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.construct-stage {
+  position: relative;
+  display: flex;
+  flex: 1 1 auto;
+  min-height: 0;
+  width: 100%;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.construct-world {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+}
+
+.construct-background {
+  position: absolute;
+  inset: 0;
+  background: var(--construct-bg-stage);
+  z-index: 0;
+}
+
+.construct-grid {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.construct-zones {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: auto;
+  overflow: visible;
+}
+
+.construct-groups {
+  position: absolute;
+  inset: 0;
+  z-index: 3;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.construct-connections {
+  position: absolute;
+  inset: 0;
+  z-index: 4;
+  overflow: visible;
+  pointer-events: auto;
+}
+
+.construct-nodes {
+  position: absolute;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.construct-connection-line {
+  pointer-events: visibleStroke;
+  cursor: pointer;
+}
+
+.construct-stage,
+.construct-stage * {
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+input,
+textarea,
+[contenteditable="true"] {
+  user-select: text;
+  -webkit-user-select: text;
+}
+.construct-toolbar {
+  position: relative;
+  z-index: 10;
+}
+
+/* ================================= Workspace grid modes ================================= */
+
+.construct-workspace-grid-modes {
+  width: 100%;
+
+  display: flex;
+  gap: 6px;
+}
+
+.construct-workspace-grid-button {
+  flex: 1;
+  height: 28px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-bg);
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast);
+}
+
+.construct-workspace-grid-button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-project-start-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 99999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.construct-project-start-modal {
+  width: 420px;
+  max-width: calc(100% - 48px);
+
+  padding: 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.construct-project-start-modal h1 {
+  margin: 0;
+
+  color: var(--construct-connection-text-primary);
+
+  font: inherit;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.construct-project-start-modal p {
+  margin: 0;
+
+  color: var(--construct-connection-menu-text);
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.45;
+
+  opacity: 0.78;
+}
+
+.construct-project-start-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.construct-project-start-actions button {
+  height: 28px;
+  padding: 0 14px;
+
+  flex: 1;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-bg);
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-project-start-actions button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-project-start-actions button:active {
+  transform: translateY(1px);
+}
+
+.construct-project-start-autosave {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  font-size: 11px;
+  font-weight: 500;
+
+  opacity: 0.82;
+
+  user-select: none;
+}
+
+.construct-project-start-autosave input {
+  margin: 0;
+}
+
+.construct-dialog-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.72);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.construct-project-start-autosave small {
+  display: block;
+  margin-top: 2px;
+
+  opacity: 0.65;
+
+  font-size: 10px;
+  font-weight: 400;
+}
+
+.construct-dialog {
+  width: 420px;
+  max-width: calc(100% - 48px);
+
+  padding: 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: transparent;
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.construct-dialog-title {
+  color: var(--construct-connection-text-primary);
+
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+
+.construct-dialog-message {
+  font-size: 11px;
+  line-height: 1.45;
+
+  opacity: 0.82;
+}
+
+.construct-dialog-input {
+  width: 100%;
+  height: 32px;
+  padding: 0 12px;
+  box-sizing: border-box;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-bg);
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: 12px;
+  font-weight: 500;
+
+  outline: none;
+}
+
+.construct-dialog-input:focus {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-dialog-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.construct-dialog-actions button {
+  height: 28px;
+  padding: 0 14px;
+
+  flex: 1;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-bg);
+  border-radius: 8px;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-dialog-actions button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-dialog-actions button:active {
+  transform: translateY(1px);
+}
+
+.construct-export-status-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 999999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.18);
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  pointer-events: none;
+}
+
+.construct-export-status {
+  min-width: 180px;
+  padding: 14px 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: rgba(20, 20, 20, 0.72);
+  border-radius: 14px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+.construct-export-status-text {
+  font-size: 11px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.construct-export-status-spinner {
+  width: 16px;
+  height: 16px;
+
+  border: 2px solid rgba(255, 255, 255, 0.18);
+  border-top-color: rgba(255, 255, 255, 0.9);
+  border-radius: 999px;
+
+  animation:
+    construct-export-spinner 0.7s linear infinite;
+}
+
+@keyframes construct-export-spinner {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}

@@ -1,0 +1,39 @@
+.construct-connections {
+  position: absolute;
+  z-index: 2;
+}
+
+.construct-connection-line,
+.construct-connection-preview {
+  fill: none;
+  stroke: var(--construct-connection-default);
+  stroke-width: 2;
+}
+
+.construct-connection-line {
+  pointer-events: stroke;
+  cursor: pointer;
+  stroke-width: 2;
+}
+
+.construct-connection-line.is-selected {
+  stroke-width: 10;
+  filter: drop-shadow(0 0 4px var(--construct-connection-selected-shadow));
+}
+
+.construct-connection-hit-area {
+  fill: none;
+  stroke: transparent;
+  stroke-width: 14;
+  pointer-events: stroke;
+  cursor: pointer;
+}
+
+.construct-connection-dot {
+  fill: var(--construct-bg-toolbar);
+
+  stroke: var(--construct-connection-default);
+
+  stroke-width:
+    var(--construct-connection-point-border);
+}

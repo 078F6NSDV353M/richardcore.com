@@ -1,0 +1,13 @@
+.construct-node-context-menu {
+  position: fixed;
+  z-index: 300;
+
+  width: 148px;
+  min-height: auto;
+
+  align-items: stretch;
+}
+
+.construct-node-context-menu[hidden] {
+  display: none;
+}

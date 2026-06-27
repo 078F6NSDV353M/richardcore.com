@@ -1,0 +1,10 @@
+.construct-text-label-menu {
+  position: fixed;
+  z-index: 999999;
+
+  width: 148px;
+}
+
+.construct-text-label-menu[hidden] {
+  display: none;
+}

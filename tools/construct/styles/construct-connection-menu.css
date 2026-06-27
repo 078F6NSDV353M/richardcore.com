@@ -1,0 +1,273 @@
+.construct-connection-menu {
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  gap: 0px;
+  padding: 6px;
+  width: 48px;
+  box-sizing: border-box;
+
+  background: transparent;
+
+  align-items: center;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  z-index: 300;
+
+  pointer-events: auto;
+}
+
+.construct-connection-menu-item {
+  position: relative;
+}
+
+/* === Buttons === */
+
+.construct-connection-menu-trigger,
+.construct-connection-menu-delete {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid transparent;
+  background: transparent;
+  
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-connection-menu-trigger:hover,
+.construct-connection-menu-delete:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-connection-menu-trigger:active,
+.construct-connection-menu-delete:active {
+  transform: translateY(1px);
+}
+
+/* === Delete === */
+
+.construct-connection-menu-delete {
+  color: var(--construct-connection-menu-danger-text);
+  border-color: transparent;
+  background: transparent;
+}
+
+.construct-connection-menu-delete:hover {
+  color: var(--construct-connection-menu-danger-hover-text);
+  border-color: rgba(239, 68, 68, 0.6);
+  background: var(--construct-connection-menu-danger-hover-bg);
+}
+
+/* === Icons === */
+
+.construct-connection-menu-icon {
+  width: 30px;
+  height: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.construct-connection-menu-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+.construct-connection-menu-color-current {
+  width: 20px;
+  height: 20px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+/* === Submenu === */
+
+.construct-connection-submenu {
+  display: none;
+}
+
+.construct-connection-submenu-shape,
+.construct-connection-submenu-line {
+  top: 20px;
+}
+
+/* Hover trigger */
+
+.construct-connection-menu-item:hover .construct-connection-submenu {
+  display: none;
+}
+
+/* Invisible bridge */
+
+.construct-connection-menu-item::after {
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: 100%;
+
+  width: 10px;
+  height: calc(100% + 8px);
+}
+
+.construct-connection-menu.is-submenu-left
+.construct-connection-menu-item::after {
+  left: auto;
+  right: 100%;
+}
+
+/* === Submenu layouts === */
+
+.construct-connection-submenu-shape {
+  grid-template-columns: repeat(3, 32px);
+}
+
+.construct-connection-submenu-line {
+  grid-template-columns: repeat(5, 32px);
+}
+
+.construct-connection-submenu-color {
+  grid-template-columns: repeat(6, 20px);
+  top: 0px;
+}
+
+/* === Submenu buttons === */
+
+.construct-connection-menu-button {
+  width: 32px;
+  height: 32px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--construct-connection-text-primary);
+  border: 1px solid transparent;
+  background: transparent;
+
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.construct-connection-menu-button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-connection-menu-button:active {
+  transform: translateY(1px);
+}
+
+.construct-connection-menu-button svg {
+  width: 24px;
+  height: 24px;
+}
+
+/* === Colors === */
+
+.construct-connection-menu-color {
+  width: 20px;
+  height: 20px;
+
+  border: 2px solid transparent;
+  border-color: rgba(128, 128, 128, 0.5);
+  background: transparent;
+  border-radius: 999px;
+  cursor: pointer;
+}
+
+.construct-connection-menu-color:hover {
+  transform: scale(1.08);
+  border-color: rgba(255, 255, 255, 0.55);
+}
+
+.construct-connection-menu.is-submenu-left
+.construct-connection-submenu {
+  left: auto;
+  right: calc(100% + 6px);
+}
+
+.construct-connection-floating-submenu {
+  position: fixed;
+  display: none;
+  gap: 0px;
+  padding: 6px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  border-radius: 10px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  z-index: 301;
+  
+  pointer-events: auto;
+}
+
+.construct-connection-floating-submenu.construct-connection-submenu-shape {
+  grid-template-columns: repeat(3, 32px);
+}
+
+.construct-connection-floating-submenu.construct-connection-submenu-line {
+  grid-template-columns: repeat(5, 32px);
+}
+
+.construct-connection-floating-submenu.construct-connection-submenu-color {
+  grid-template-columns: repeat(4, 20px) 1px 20px;
+  grid-template-rows:
+    repeat(3, 20px);
+  margin-top: -6px;
+  gap: 6px;
+}
+
+.construct-connection-floating-submenu.construct-connection-submenu-color::before {
+  content: "";
+
+  grid-column: 5;
+  grid-row: 1 / span 3;
+
+  width: 1px;
+  height: 100%;
+
+  background: var(--construct-menu-border);
+
+  opacity: 0.75;
+}
+
+.construct-connection-menu-color[data-value="#ffffff"] {
+  grid-column: 6;
+  grid-row: 1;
+}
+
+.construct-connection-menu-color[data-value="#808080"] {
+  grid-column: 6;
+  grid-row: 2;
+}
+
+.construct-connection-menu-color[data-value="#000000"] {
+  grid-column: 6;
+  grid-row: 3;
+}

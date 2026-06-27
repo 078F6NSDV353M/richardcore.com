@@ -1,0 +1,852 @@
+/* ================================= Node core ================================= */
+/* 
+.....#  #  ##  ###  ####     ###  ##  ###  ####.....
+.....## # #  # #  # #       #    #  # #  # #.....
+.....# ## #  # #  # ###     #    #  # ###  ###.....
+.....#  # #  # #  # #       #    #  # # #  #.....
+.....#  #  ##  ###  ####     ###  ##  #  # ####.....
+*/
+
+:root {
+  --construct-connection-point-size: 14px;
+  --construct-connection-point-hit-size: 36px;
+  --construct-connection-point-border: 2px;
+}
+
+.construct-node {
+  position: absolute;
+
+  min-width: 240px;
+  max-width: 800px;
+  width: 240px;
+
+  min-height: 200px;
+  max-height: 1200px;
+  height: 200px;
+
+  padding: 12px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  text-align: left;
+
+  color: var(--text-primary);
+  border: 3px solid var(--construct-connection-default);
+  background: var(--construct-bg-toolbar);
+  border-radius: var(--radius-md);
+  cursor: grab;
+}
+
+.construct-node,
+.construct-node * {
+  pointer-events: auto;
+}
+
+.construct-node:focus-visible {
+  outline: none;
+}
+
+
+/* ================================= Node layers ================================= */
+/* 
+.....#  #  ##  ###  ####    #     ##  #   # #### ###   ###.....
+.....## # #  # #  # #       #    #  #  # #  #    #  # #.....
+.....# ## #  # #  # ###     #    ####   #   ###  ###   ##.....
+.....#  # #  # #  # #       #    #  #   #   #    # #     #.....
+.....#  #  ##  ###  ####    #### #  #   #   #### #  # ###.....
+*/
+
+
+.construct-node:not(.construct-node-group) {
+  z-index: 3;
+}
+
+.construct-node:not(.construct-node-group).is-selected {
+  z-index: 4;
+}
+
+.construct-node:not(.construct-node-group).is-editing {
+  z-index: 5;
+}
+
+
+/* ================================= Node types ================================= */
+/* 
+.....#  #  ##  ###  ####    ##### #   # ###  ####  ###.....
+.....## # #  # #  # #         #    # #  #  # #    #.....
+.....# ## #  # #  # ###       #     #   ###  ###   ##.....
+.....#  # #  # #  # #         #     #   #    #       #.....
+.....#  #  ##  ###  ####      #     #   #    #### ###.....
+*/
+
+.construct-node-type-text {
+  background: var(--construct-node-bg-text);
+}
+
+.construct-node-type-image {
+  background: var(--construct-node-bg-image);
+}
+
+.construct-node-type-multi {
+  background: var(--construct-node-bg-multi);
+}
+
+
+/* ================================= Node ports ================================= */
+/* 
+.....#  #  ##  ###  ####    ###   ##  ###  #####  ###.....
+.....## # #  # #  # #       #  # #  # #  #   #   #.....
+.....# ## #  # #  # ###     ###  #  # ###    #    ##.....
+.....#  # #  # #  # #       #    #  # # #    #      #.....
+.....#  #  ##  ###  ####    #     ##  #  #   #   ###.....
+*/
+
+.construct-node-port {
+  position: absolute;
+
+  width: var(--construct-connection-point-hit-size);
+  height: var(--construct-connection-point-hit-size);
+
+  margin-left:
+    calc(var(--construct-connection-point-hit-size) / -2);
+
+  margin-top:
+    calc(var(--construct-connection-point-hit-size) / -2);
+
+  cursor: crosshair;
+  background: transparent;
+  border: none;
+  border-radius: 999px;
+}
+
+.construct-node-port::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  width: var(--construct-connection-point-size);
+  height: var(--construct-connection-point-size);
+
+  border:
+    var(--construct-connection-point-border)
+    solid
+    var(
+      --construct-node-port-color,
+      var(--construct-connection-default)
+    );
+
+  border-radius: 999px;
+  background: var(--construct-bg-stage);
+
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+}
+
+.construct-node-port-top {
+  top: 0;
+  left: 50%;
+}
+
+.construct-node-port-right {
+  top: 50%;
+  left: 100%;
+}
+
+.construct-node-port-bottom {
+  top: 100%;
+  left: 50%;
+}
+
+.construct-node-port-left {
+  top: 50%;
+  left: 0;
+}
+
+
+/* ================================= Node content ================================= */
+/* 
+.....#  #  ##  ###  ####     ###  ##  #  # ##### #### #  # #####.....
+.....## # #  # #  # #       #    #  # ## #   #   #    ## #   #.....
+.....# ## #  # #  # ###     #    #  # # ##   #   ###  # ##   #.....
+.....#  # #  # #  # #       #    #  # #  #   #   #    #  #   #.....
+.....#  #  ##  ###  ####     ###  ##  #  #   #   #### #  #   #.....
+*/
+
+.construct-node-content {
+  width: 100%;
+  min-height: 0;
+  height: 100%;
+  flex: 1;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  overflow: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  cursor: grab;
+}
+
+.construct-node-title-row {
+  width: 100%;
+  margin-bottom: 6px;
+  min-width: 0;
+
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+}
+
+.construct-node-side-indicator {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  min-height: 28px;
+  padding: 0;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-bg);
+  border-radius: 999px;
+
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+  white-space: nowrap;
+
+  opacity: 0.9;
+}
+
+.construct-node-side-indicator.side-a {
+  color: #ffffff;
+  border-color: #2f6bff;
+  background: #2f6bff;
+}
+
+.construct-node-side-indicator.side-b {
+  color: #ffffff;
+  border-color: #ff8a2f;
+  background: #ff8a2f;
+}
+
+.construct-node-title {
+  width: 100%;
+  min-width: 0;
+  min-height: 20px;
+  line-height: 20px;
+  padding-bottom: 8px;
+  padding-left: 6px;
+
+  font-weight: 600;
+
+  outline: none;
+
+  white-space: nowrap;
+  overflow-x: auto;
+  overflow-y: hidden;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+
+  cursor: grab;
+}
+
+.construct-node-title::-webkit-scrollbar {
+  display: none;
+}
+
+.construct-node-text {
+  display: block;
+  width: 100%;
+  flex: 1;
+
+  height: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+
+  outline: none;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+
+  cursor: grab;
+}
+
+.construct-node.is-editing .construct-node-title,
+.construct-node.is-editing .construct-node-text {
+  cursor: text;
+}
+
+.construct-node.is-editing .construct-node-content {
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.construct-node.is-editing .construct-node-body-scroll {
+  display: flex;
+  flex-direction: column;
+}
+
+.construct-node.is-editing .construct-node-text {
+  flex: 1 0 auto;
+  min-height: 100%;
+}
+
+/* ================================= Node image content ================================= */
+/* 
+.....#  #  ##  ###  ####    ### #   #  ##   ### ####     ###  ##  #  # ##### #### #  # #####.....
+.....## # #  # #  # #        #  ## ## #  # #    #       #    #  # ## #   #   #    ## #   #.....
+.....# ## #  # #  # ###      #  # # # #### # ## ###     #    #  # # ##   #   ###  # ##   #.....
+.....#  # #  # #  # #        #  #   # #  # #  # #       #    #  # #  #   #   #    #  #   #.....
+.....#  #  ##  ###  ####    ### #   # #  #  ### ####     ###  ##  #  #   #   #### #  #   #.....
+*/
+
+
+/* ================================= Node resize ================================= */
+/* 
+.....#  #  ##  ###  ####    ###  ####  ### ### #### ####.....
+.....## # #  # #  # #       #  # #    #     #    #  #.....
+.....# ## #  # #  # ###     ###  ###   ##   #   #   ###.....
+.....#  # #  # #  # #       # #  #       #  #  #    #.....
+.....#  #  ##  ###  ####    #  # #### ###  ### #### ####.....
+*/
+
+.construct-node-resize {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+
+  width: 12px;
+  height: 12px;
+
+  background:
+    linear-gradient(
+      135deg,
+      transparent 50%,
+      var(
+        --construct-node-port-color,
+        var(--construct-connection-default)
+      ) 50%
+    );
+
+  cursor: nwse-resize;
+}
+
+
+/* ================================= Node states ================================= */
+/* 
+.....#  #  ##  ###  ####     ### #####  ##  ##### ####  ###.....
+.....## # #  # #  # #       #      #   #  #   #   #    #.....
+.....# ## #  # #  # ###      ##    #   ####   #   ###   ##.....
+.....#  # #  # #  # #          #   #   #  #   #   #       #.....
+.....#  #  ##  ###  ####    ###    #   #  #   #   #### ###.....
+*/
+
+.construct-node.is-selected {
+  box-shadow: 0 0 4px 0px var(--construct-connection-selected-shadow);
+}
+
+.construct-node.is-editing {
+  border-style: dashed;
+}
+
+
+/* ================================= Group nodes legacy ================================= */
+/* 
+..... ### ###   ##  #  # ###     #  #  ##  ###  ####  ###    #    ####  ###  ##   ### #   #.....
+.....#    #  # #  # #  # #  #    ## # #  # #  # #    #       #    #    #    #  # #     # #.....
+.....# ## ###  #  # #  # ###     # ## #  # #  # ###   ##     #    ###  # ## #### #      #.....
+.....#  # # #  #  # #  # #       #  # #  # #  # #       #    #    #    #  # #  # #      #.....
+..... ### #  #  ##   ##  #       #  #  ##  ###  #### ###     #### ####  ### #  #  ###   #.....
+*/
+
+.construct-node.construct-node-group {
+  z-index: 1;
+}
+
+.construct-node.construct-node-group.is-selected {
+  z-index: 1;
+}
+
+.construct-node-group .construct-group-proxy-port {
+  display: none;
+}
+
+.construct-node-group.is-collapsed .construct-group-proxy-port {
+  display: block;
+}
+
+/*======================================================================================*/
+
+.construct-node-title-row {
+  flex-shrink: 0;
+}
+
+.construct-node.is-editing .construct-node-content {
+  overflow: hidden;
+}
+
+.construct-node-body-scroll {
+  min-height: 0;
+  flex: 1;
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  scrollbar-width: none;
+
+  scrollbar-color:
+    rgba(255, 255, 255, 0.18)
+    transparent;
+}
+
+.construct-node.is-editing
+.construct-node-body-scroll {
+  scrollbar-width: thin;
+}
+
+.construct-node-body-scroll::-webkit-scrollbar {
+  width: 0px;
+}
+
+.construct-node.is-editing
+.construct-node-body-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.construct-node-body-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.construct-node-body-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+}
+
+.construct-node-body-scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.28);
+}
+
+.construct-node-image-block {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.construct-node-image {
+  position: relative;
+
+  width: 100%;
+  min-height: 36px;
+  margin-bottom: 8px;
+  padding: 6px 8px;
+  box-sizing: border-box;
+
+  border: 1px dashed
+    var(--construct-connection-default);
+
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 6px;
+
+  outline: none;
+  overflow: hidden;
+}
+
+.construct-node-image.has-image {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+}
+
+.construct-node-image-placeholder {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  min-height: 20px;
+
+  font-size: 12px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.construct-node-image-toolbar {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+}
+
+.construct-node-image-toolbar button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--text-primary);
+  border: none;
+  background: transparent;
+  border-radius: 6px;
+
+  cursor: pointer;
+}
+
+.construct-node-image-toolbar button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.construct-node-image-toolbar svg {
+  width: 12px;
+  height: 12px;
+}
+
+.construct-node-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+
+  border-radius: 6px;
+}
+
+.construct-node-image-input {
+  display: none;
+}
+
+.construct-node-image:not(.has-image)
+.construct-node-image-remove-button {
+  display: none;
+}
+
+.construct-node-image.has-image
+.construct-node-image-remove-button {
+  display: flex;
+}
+
+.construct-node-image.has-image
+.construct-node-image-placeholder {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 5;
+
+  padding: 4px 6px;
+
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 8px;
+
+  backdrop-filter: blur(6px);
+}
+
+.construct-node-image.has-image
+.construct-node-image-placeholder span {
+  display: none;
+}
+
+.construct-node:not(.is-editing)
+.construct-node-image.has-image
+.construct-node-image-placeholder {
+  display: none;
+}
+
+/*==============================================================================*/
+
+
+.construct-node-whiteboard {
+  position: relative;
+
+  width: 100%;
+  height: 100%;
+  min-height: 240px;
+
+  display: flex;
+  flex-direction: column;
+
+  background: #ffffff;
+  border-radius: 8px;
+
+  overflow: hidden;
+}
+
+.construct-node-whiteboard-brush {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 5;
+
+  width: 28px;
+  height: 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #111111;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.92);
+  border-radius: 8px;
+
+  cursor: pointer;
+
+  backdrop-filter: blur(8px);
+}
+
+.construct-node-whiteboard-brush svg {
+  width: 16px;
+  height: 16px;
+}
+
+.construct-node-whiteboard-menu {
+  position: fixed;
+  top: 42px;
+  left: 8px;
+  z-index: 10;
+
+  width: 180px;
+  padding: 8px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 10px;
+
+  backdrop-filter: blur(10px);
+
+  pointer-events: auto;
+}
+
+.construct-node-whiteboard-svg {
+  width: 100%;
+  height: 100%;
+  flex: 1;
+
+  touch-action: none;
+  cursor: crosshair;
+
+  display: block;
+  overflow: hidden;
+
+  pointer-events: auto;
+  user-select: none;
+}
+
+.construct-node-whiteboard-menu {
+  position: fixed;
+  z-index: 50;
+
+  width: 248px;
+  padding: 4px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+
+  color: var(--construct-connection-menu-text);
+  background: transparent;
+  border-radius: 10px;
+
+  backdrop-filter: blur(10px);
+}
+
+/* .construct-node-context-menu {
+  position: fixed;
+  z-index: 300;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+
+  width: 140px;
+  min-height: auto;
+  padding: 6px;
+  box-sizing: content-box;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: transparent;
+  border-radius: 10px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(10px);
+} */
+
+.construct-node-whiteboard-menu[hidden] {
+  display: none;
+}
+
+.construct-node-whiteboard-sizes {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+}
+
+.construct-node-whiteboard-sizes button {
+  width: 100%;
+  aspect-ratio: 1;
+
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+
+  cursor: pointer;
+}
+
+.construct-node-whiteboard-sizes button:hover {
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.construct-node-whiteboard-sizes button span {
+  display: block;
+
+  background: #000000;
+  border-radius: 999px;
+}
+
+.construct-whiteboard-menu-separator {
+  width: 100%;
+  height: 1px;
+
+  background: rgba(0, 0, 0, 0.12);
+}
+
+.construct-whiteboard-color-grid {
+  width: 100%;
+  padding: 6px;
+  box-sizing: border-box;
+
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  justify-items: center;
+  gap: 6px;
+
+  margin-top: 4px;
+}
+
+.construct-whiteboard-color-grid
+.construct-connection-menu-color {
+  width: 24px;
+  height: 24px;
+
+  border-radius: 999px;
+}
+
+.construct-whiteboard-color-grid
+button[data-color="#ffffff"] {
+  border: 2px solid rgba(0, 0, 0, 0.24);
+}
+
+.construct-node-resize[hidden] {
+  display: none !important;
+}
+
+.construct-node:not(.is-editing)
+.construct-node-resize {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+.construct-node:not(.is-editing)
+.construct-node-whiteboard-menu {
+  display: none !important;
+}
+
+.construct-whiteboard-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: rgba(0, 0, 0, 0.72);
+  backdrop-filter: blur(10px);
+}
+
+.construct-whiteboard-overlay[hidden] {
+  display: none;
+}
+
+.construct-whiteboard-window {
+  position: relative;
+
+  width: min(1400px, 88vw);
+
+  display: inline-flex;
+  flex-direction: column;
+
+  padding: 14px;
+  box-sizing: border-box;
+
+  border: 1px solid var(--construct-connection-menu-border);
+  border-radius: 20px;
+
+  background: #10233f;
+}
+
+.construct-whiteboard-toolbar {
+  width: 100%;
+  height: 48px;
+
+  padding: 0 18px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+
+  flex-shrink: 0;
+}
+
+.construct-whiteboard-frame {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+
+  border: none;
+
+  background: #ffffff;
+}
+
+.construct-whiteboard-toolbar-left,
+.construct-whiteboard-toolbar-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.construct-whiteboard-toolbar-right {
+  margin-left: auto;
+}

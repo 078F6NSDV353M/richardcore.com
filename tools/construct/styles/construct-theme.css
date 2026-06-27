@@ -1,0 +1,136 @@
+/* === ConStruct theme variables === */
+
+/* Dark theme */
+:root[data-theme="dark"] {
+  --construct-bg-stage: #090D14;
+  --construct-bg-toolbar: #20262e;
+  --construct-grid-line: rgba(255, 255, 255, 0.1);
+  --construct-grid-dot: rgba(255, 255, 255, 0.1);
+  --construct-menu-bg: #20262e;
+  --construct-menu-border: #313944;
+  --construct-menu-button-bg: #2a313b;
+  --construct-menu-button-hover-bg: #343d48;
+  --construct-menu-text: #e5e7eb;
+  --construct-menu-label: #9ca3af;
+  --construct-connection-selected-shadow: rgba(255, 255, 255, 0.6);
+
+  --construct-menu-danger-bg: rgba(239, 68, 68, 0.12);
+  --construct-menu-danger-hover-bg: rgba(239, 68, 68, 0.2);
+  --construct-menu-danger-text: #fca5a5;
+  --construct-menu-danger-hover-text: #fecaca;
+  --construct-connection-default: #0094FF;
+
+  --construct-connection-menu-text: var(--construct-menu-text);
+  --construct-connection-menu-border: var(--construct-menu-border);
+  --construct-connection-menu-bg: var(--construct-menu-bg);
+
+  --construct-connection-menu-button-bg: var(--construct-menu-button-bg);
+  --construct-connection-menu-button-hover-bg: var(--construct-menu-button-hover-bg);
+
+  --construct-connection-menu-danger-text: var(--construct-menu-danger-text);
+  --construct-connection-menu-danger-hover-text: var(--construct-menu-danger-hover-text);
+  --construct-connection-menu-danger-bg: var(--construct-menu-danger-bg);
+  --construct-connection-menu-danger-hover-bg: var(--construct-menu-danger-hover-bg);
+
+  --construct-connection-text-primary: var(--text-primary);
+  --construct-connection-border-default: var(--border-default);
+  --construct-connection-border-strong: var(--border-strong);
+  --construct-connection-transition-fast: var(--transition-fast);
+
+  --construct-node-bg-text: #1E232D;
+  --construct-node-bg-image: #344B61;
+  --construct-node-bg-multi: #2F395E;
+}
+
+/* Light theme */
+:root[data-theme="light"] {
+  --construct-bg-stage: #e0e0e0;
+  --construct-bg-toolbar: #ffffff;
+  --construct-grid-line: rgba(0, 0, 0, 0.06);
+  --construct-grid-dot: rgba(0, 0, 0, 0.2);
+  --construct-menu-bg: #ffffff;
+  --construct-menu-border: #d7dde5;
+  --construct-menu-button-bg: #f3f4f6;
+  --construct-menu-button-hover-bg: #cdd3e2;
+  --construct-menu-text: #1f2933;
+  --construct-menu-label: #6b7280;
+  --construct-connection-selected-shadow: rgba(0, 0, 0, 0.6);
+
+  --construct-menu-danger-bg: rgba(239, 68, 68, 0.08);
+  --construct-menu-danger-hover-bg: rgba(239, 68, 68, 0.16);
+  --construct-menu-danger-text: #dc2626;
+  --construct-menu-danger-hover-text: #b91c1c;
+  --construct-connection-default: #3b82f6;
+
+  --construct-connection-menu-text: var(--construct-menu-text);
+  --construct-connection-menu-border: var(--construct-menu-border);
+  --construct-connection-menu-bg: var(--construct-menu-bg);
+
+  --construct-connection-menu-button-bg: var(--construct-menu-button-bg);
+  --construct-connection-menu-button-hover-bg: var(--construct-menu-button-hover-bg);
+
+  --construct-connection-menu-danger-text: var(--construct-menu-danger-text);
+  --construct-connection-menu-danger-hover-text: var(--construct-menu-danger-hover-text);
+  --construct-connection-menu-danger-bg: var(--construct-menu-danger-bg);
+  --construct-connection-menu-danger-hover-bg: var(--construct-menu-danger-hover-bg);
+
+  --construct-connection-text-primary: var(--text-primary);
+  --construct-connection-border-default: var(--border-default);
+  --construct-connection-border-strong: var(--border-strong);
+  --construct-connection-transition-fast: var(--transition-fast);
+
+  --construct-node-bg-text: #ebe9e3;
+  --construct-node-bg-image: #e0eee4;
+  --construct-node-bg-multi: #e0e4ee;
+}
+
+/* Global site overrides for ConStruct */
+html[data-tool-slug="construct"][data-theme="dark"] {
+  --site-header-bg: #0F1721;
+  --site-footer-bg: #0F1721;
+
+  --site-button-bg: #090D14;
+  --site-button-text: #f5f7fa;
+  --site-button-border: #313944;
+  --site-button-hover-bg: #262d36;
+  --site-button-hover-border: #3a4450;
+
+  --site-button-primary-bg: #3b82f6;
+  --site-button-primary-text: #ffffff;
+  --site-button-primary-border: #3b82f6;
+  --site-button-primary-hover-bg: #2563eb;
+  --site-button-primary-hover-border: #2563eb;
+
+  --site-button-secondary-text: #f5f7fa;
+  --site-button-secondary-border: #3a4450;
+  --site-button-secondary-hover-bg: #262d36;
+
+  --site-button-ghost-text: #a9b4c2;
+  --site-button-ghost-hover-bg: #262d36;
+  --site-button-ghost-hover-text: #f5f7fa;
+}
+
+html[data-tool-slug="construct"][data-theme="light"] {
+  --site-header-bg: #d8e8ff;
+  --site-footer-bg: #d8e8ff;
+
+  --site-button-bg: #ffffff;
+  --site-button-text: #1f2933;
+  --site-button-border: #d7dde5;
+  --site-button-hover-bg: #f2f4f7;
+  --site-button-hover-border: #c7ced6;
+
+  --site-button-primary-bg: #2563eb;
+  --site-button-primary-text: #ffffff;
+  --site-button-primary-border: #2563eb;
+  --site-button-primary-hover-bg: #1d4ed8;
+  --site-button-primary-hover-border: #1d4ed8;
+
+  --site-button-secondary-text: #1f2933;
+  --site-button-secondary-border: #c7ced6;
+  --site-button-secondary-hover-bg: #f2f4f7;
+
+  --site-button-ghost-text: #52606d;
+  --site-button-ghost-hover-bg: #f2f4f7;
+  --site-button-ghost-hover-text: #1f2933;
+}

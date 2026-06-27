@@ -1,0 +1,20 @@
+.app-footer {
+  position: relative;
+  border-top: var(--border-thin) solid var(--border-default);
+  background: var(--site-footer-bg, var(--bg-surface));
+  z-index: 100;
+}
+
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 20px;
+  padding: 0 var(--space-lg);
+}
+
+.footer-text {
+  font-size: var(--font-size-sm);
+  color: var(--text-secondary);
+}

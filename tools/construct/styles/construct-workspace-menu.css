@@ -1,0 +1,23 @@
+.construct-workspace-menu {
+  position: fixed;
+  z-index: 999999;
+
+  width: 148px;
+}
+
+.construct-workspace-grid-modes {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4px;
+}
+
+.construct-workspace-grid-modes .construct-menu-button {
+  justify-content: center;
+  padding: 0;
+  gap: 0;
+}
+
+.construct-workspace-grid-modes .construct-menu-button i,
+.construct-workspace-grid-modes .construct-menu-button svg {
+  margin: 0;
+}

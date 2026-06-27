@@ -1,0 +1,125 @@
+.construct-text-labels {
+  position: absolute;
+  inset: 0;
+  z-index: 6;
+
+  overflow: visible;
+  pointer-events: none;
+}
+
+.construct-text-label {
+  position: absolute;
+
+  display: inline-block;
+
+  color: #ffffff;
+  background: transparent;
+
+  font-weight: 700;
+  line-height: 1;
+  white-space: nowrap;
+
+  cursor: grab;
+
+  pointer-events: auto;
+  user-select: none;
+}
+
+.construct-text-label[data-locked="true"] {
+  cursor: default;
+}
+
+.construct-text-label-text {
+  outline: none;
+  white-space: nowrap;
+}
+
+.construct-text-label-text[contenteditable="true"] {
+  cursor: text;
+  user-select: text;
+}
+
+.construct-text-label.is-selected
+.construct-text-label-corner {
+  display: block;
+}
+
+.construct-text-label-corner {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  display: none;
+
+  pointer-events: auto;
+}
+
+.construct-text-label-corner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  width: 0;
+  height: 0;
+}
+
+.construct-text-label-corner-tl {
+  top: -18px;
+  left: -18px;
+
+  cursor: nwse-resize;
+}
+
+.construct-text-label-corner-tr {
+  top: -18px;
+  right: -18px;
+
+  cursor: nesw-resize;
+}
+
+.construct-text-label-corner-br {
+  right: -18px;
+  bottom: -18px;
+
+  cursor: nwse-resize;
+}
+
+.construct-text-label-corner-bl {
+  bottom: -18px;
+  left: -18px;
+
+  cursor: nesw-resize;
+}
+
+.construct-text-label-corner-tl::before {
+  border-top:
+    18px solid var(--construct-connection-menu-text);
+
+  border-right:
+    18px solid transparent;
+}
+
+.construct-text-label-corner-tr::before {
+  border-top:
+    18px solid var(--construct-connection-menu-text);
+
+  border-left:
+    18px solid transparent;
+}
+
+.construct-text-label-corner-br::before {
+  border-bottom:
+    18px solid var(--construct-connection-menu-text);
+
+  border-left:
+    18px solid transparent;
+}
+
+.construct-text-label-corner-bl::before {
+  border-bottom:
+    18px solid var(--construct-connection-menu-text);
+
+  border-right:
+    18px solid transparent;
+}

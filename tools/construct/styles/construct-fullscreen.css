@@ -1,0 +1,65 @@
+/* === Presentation mode === */
+
+.construct-fullscreen #header-root,
+.construct-fullscreen #footer-root {
+  display: none;
+}
+
+.construct-fullscreen main {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.construct-fullscreen .app-container {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.construct-fullscreen .construct-page-shell {
+  width: 100%;
+  height: 100%;
+}
+
+.construct-fullscreen .construct-stage {
+  width: 100%;
+  height: 100%;
+}
+
+.construct-presentation-trigger {
+  display: none;
+}
+
+.construct-fullscreen
+.construct-presentation-trigger {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 24px;
+
+  z-index: 9998;
+  display: block;
+}
+
+.construct-fullscreen
+.construct-floating-panel-group {
+  z-index: 9999;
+
+  transform: translateY(calc(-100% - 16px));
+
+  transition:
+    transform 140ms ease;
+}
+
+.construct-fullscreen
+.construct-presentation-trigger:hover
++ .construct-floating-panel-group,
+
+.construct-fullscreen
+.construct-floating-panel-group:hover {
+  transform: translateY(0);
+}

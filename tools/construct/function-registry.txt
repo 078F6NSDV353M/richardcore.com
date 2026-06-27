@@ -1,0 +1,404 @@
+CONSTRUCT TOOL
+
+construct-tool.js
+- selectAllWorkspaceNodes()
+- handleWorkspaceHotkeysFromTool()
+- lockConstructScrollPosition()
+- handleClipboardHotkeysFromTool()
+- init()
+
+DOM
+
+construct-dom.js
+- getStage()
+- getWorld()
+- getGrid()
+- getZonesLayer()
+- getGroupsLayer()
+- getNodesLayer()
+- getConnectionsLayer()
+- getAddNodeButton()
+- getFullscreenButton()
+
+NODES
+
+construct-nodes.js
+- getNodeDataFromElement()
+- createNode()
+- handleStageDoubleClick()
+- handleAddNodeClick()
+- toggleGroupCollapse()
+
+construct-node-edit.js
+- clearTextSelection()
+- resetNodeContentScroll()
+- applyNodeEditMode()
+- closeAllNodeEditModes()
+- toggleNodeEditMode()
+- closeNodeEditMode()
+- setupEditOutsideClose()
+
+construct-node-image.js
+- isImageFile()
+- readFileAsDataUrl()
+- setImage()
+- removeImage()
+- setImageFromFile()
+- handleImagePaste()
+- openImageUrlPrompt()
+- setupImageHandlers()
+
+construct-node-text.js
+- moveCaretToEnd()
+- clampTextLength()
+- setupTextHandlers()
+
+construct-node-selection.js
+- clearNodeSelection()
+- getSelectedNodeElements()
+- setupNodeSelection()
+- hasSelectedNodes()
+
+construct-node-resize.js
+- setupNodeResize()
+
+construct-node-scroll.js
+- keepNodeScrollInside()
+- setupScrollHandlers()
+
+construct-node-sides.js
+- updateSideIndicator()
+- saveCurrentSideContent()
+- applySideContent()
+- flipNodeSide()
+
+construct-node-utils.js
+- getNodeData()
+- copyNodeContent()
+- findMatchingPort()
+
+CONNECTIONS
+
+construct-connections.js
+- getPortLocalPosition()
+- createLineElement()
+- createConnectionDotElement()
+- getPortDirection()
+- getPreviewEndDirection()
+- setPathPosition()
+- offsetPoint()
+- startConnection()
+- setConnectionType()
+- updateConnectionPreview()
+- getNodeColorFromPort()
+- applyConnectionStyles()
+- getBezierPoint()
+- getBezierTangent()
+- getNodeDataFromPort()
+- getCollapsedParentGroup()
+- getProxyPortSide()
+- getOrCreateProxyPort()
+- getConnectionEndpointSortValue()
+- getVisibleConnectionPort()
+- shouldHideConnection()
+- setConnectionVisible()
+- updateSingleConnection()
+- updateNodeConnections()
+- updateAllConnections()
+- createConnectionFromPorts()
+- finishConnection()
+- cancelConnection()
+- removeConnection()
+
+construct-connection-selection.js
+- getSelectedConnection()
+- setSelectedConnection()
+- getSelectedConnections()
+- hasSelectedConnections()
+- hasMixedSelection()
+- clearSelectedConnections()
+- applyConnectionSelection()
+- restoreSelectedConnectionClasses()
+
+ZONES
+
+construct-zones.js
+- createZone()
+- startZoneDrag()
+- startZoneResize()
+- applyZoneShapeToSvg()
+- applyZoneShapeToElement()
+- getSelectedZone()
+- deleteSelectedZone()
+- initZoneHotkeys()
+- toggleZoneLock()
+- clearZoneSelection()
+- initZoneSelection()
+- setupZoneTitle()
+
+TEXT LABELS
+
+construct-text-labels.js
+- ensureTextLabelsLayer()
+- getTextLabelData()
+- getSelectedTextLabels()
+- clearTextLabelSelection()
+- selectTextLabel()
+- syncTextLabelData()
+- createTextLabel()
+- startTextLabelDrag()
+- startTextLabelResize()
+- deleteSelectedTextLabels()
+- initTextLabelHotkeys()
+- initTextLabelSelectionClear()
+- initTextLabels()
+
+SELECTION
+
+construct-selection-box.js
+- startSelectionBox()
+- updateSelectionBox()
+- finishSelectionBox()
+
+construct-selection-controller.js
+- clearObjectSelection()
+- isAdditiveSelectionEvent()
+- selectObject()
+- selectOnlyObject()
+
+construct-drag-controller.js
+- getSelectedDragItems()
+- startDragSelection()
+
+VIEWPORT
+
+construct-viewport.js
+- clampZoom()
+- applyTransform()
+- screenToWorld()
+- handleWheel()
+- fitWorkspaceToContent()
+
+GRID
+
+construct-grid.js
+- getThemeValue()
+- clearGridStyles()
+- updateGrid()
+
+POINTER
+
+construct-pointer.js
+- handleMouseDown()
+- handleMouseMove()
+- handleMouseUp()
+- initPointerControls()
+
+STORAGE
+
+construct-storage.js
+- serializeNodes()
+- serializeConnections()
+- serializeZones()
+- serializeTextLabels()
+- createWorkspaceSnapshot()
+- createHistorySnapshot()
+- saveWorkspaceState()
+- loadWorkspaceState()
+- restoreWorkspaceState()
+- setupWorkspaceAutoSave()
+- clearWorkspaceState()
+
+CLIPBOARD
+
+construct-clipboard.js
+- getSelectedNodesForClipboard()
+- serializeNode()
+- serializeConnections()
+- serializeZones()
+- serializeTextLabels()
+- copySelectedNodes()
+- getClipboardBounds()
+- getViewportCenterWorld()
+- pasteClipboard()
+
+construct-clipboard-hotkeys.js
+- handleClipboardHotkeys()
+
+HISTORY
+
+construct-history.js
+- cloneSnapshot()
+- stripImagesFromSnapshot()
+- stripImagesFromStack()
+- saveHistoryToStorage()
+- loadHistoryFromStorage()
+- pushHistoryState()
+- undoHistoryState()
+- redoHistoryState()
+- clearHistoryState()
+- hasStoredHistory()
+- getHistoryTopSnapshot()
+- hydrateHistoryImages()
+- canUndoHistory()
+- canRedoHistory()
+
+construct-history-runtime.js
+- initHistoryRuntime()
+
+PROJECT
+
+construct-project-files.js
+- createProject()
+- openProjectFile()
+- saveProjectFile()
+- saveProjectFileAs()
+
+construct-project-runtime.js
+- getCurrentProjectDirectoryHandle()
+- getCurrentProjectFileHandle()
+- getCurrentImagesDirectoryHandle()
+- getIsProjectLoaded()
+- setCurrentProjectDirectoryHandle()
+- setCurrentProjectFileHandle()
+- setCurrentImagesDirectoryHandle()
+- setIsProjectLoaded()
+- resetProjectRuntime()
+
+construct-project-assets.js
+- saveImageAsset()
+- loadImageAsset()
+- duplicateImageAsset()
+- copyProjectImageAssets()
+- archiveImageAsset()
+- archiveImageAssetLater()
+- restoreImageAsset()
+
+construct-project-autosave.js
+- setProjectAutosaveEnabled()
+- getProjectAutosaveEnabled()
+- initProjectAutosave()
+
+construct-project-start-modal.js
+- createModalElement()
+- showProjectStartModal()
+
+WORKSPACE
+
+construct-workspace-actions.js
+- getSearchInput()
+- getOpenButton()
+- getSaveButton()
+- getExportPngButton()
+- focusSearchInput()
+- triggerOpenProject()
+- triggerSaveProject()
+- triggerSaveAsProject()
+- triggerExportWorkspacePng()
+- triggerFitWorkspace()
+
+construct-workspace-restore.js
+- preserveImagesInSnapshot()
+- createWorkspaceRestore()
+
+EXPORT
+
+construct-export-png.js
+- exportWorkspacePng()
+
+construct-export-status.js
+- createOverlay()
+- showExportStatus()
+- hideExportStatus()
+
+FULLSCREEN
+
+construct-fullscreen.js
+- isBrowserFullscreen()
+- enterBrowserFullscreen()
+- exitBrowserFullscreen()
+- togglePresentationMode()
+- handleBrowserFullscreenChange()
+- handleEscapeKey()
+- initPresentationMode()
+
+DIALOGS
+
+construct-dialogs.js
+- createDialogBase()
+- showConstructPrompt()
+
+WHITEBOARD OVERLAY
+
+construct-whiteboard-overlay.js
+- fitWhiteboardFrame()
+- ensureWhiteboardOverlay()
+- openWhiteboardOverlay()
+
+MENUS
+
+construct-menu-manager.js
+- closeConnectionMenu()
+- closeWorkspaceMenu()
+- closeNodeMenu()
+- closeZoneMenuGlobal()
+- closeTextLabelMenuGlobal()
+- closeMultiselectMenuGlobal()
+- closeAllContextMenus()
+
+construct-workspace-menu.js
+- ensureWorkspaceContextMenu()
+- initWorkspaceContextMenu()
+- openWorkspaceContextMenu()
+
+construct-node-menu.js
+- ensureNodeContextMenu()
+- openNodeContextMenu()
+- closeNodeContextMenu()
+- handleNodeMenuAction()
+
+construct-connection-menu.js
+- updateMenuState()
+- initMenuIcons()
+- applyColorToSelectedConnections()
+- initConnectionMenu()
+
+construct-zone-menu.js
+- getSelectedZones()
+- applyZoneColor()
+- applyZoneLineStyle()
+- closeZoneMenu()
+- openZoneMenu()
+- initZoneMenu()
+
+construct-text-label-menu.js
+- ensureTextLabelMenu()
+- closeTextLabelMenu()
+- openTextLabelMenu()
+- handleTextLabelMenuClick()
+
+construct-multiselect-menu.js
+- ensureMultiselectMenu()
+- closeMultiselectMenu()
+- openMultiselectMenu()
+
+construct-menu-base.js
+- positionMenu()
+
+construct-menu-icons.js
+- getShapeIcon()
+- getLineIcon()
+
+ASSETS
+
+construct-asset-archive.js
+- registerArchivedNodeAssets()
+- getArchivedNodeAssets()
+- clearArchivedNodeAssets()
+- clearAssetArchiveRegistry()
+- getArchivePathForImagePath()
+
+DEMO
+
+construct-demo-project.js
+- createDemoProjectSnapshot()

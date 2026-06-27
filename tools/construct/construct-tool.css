@@ -1,0 +1,26 @@
+@import "./styles/construct-theme.css";
+@import "./styles/construct-layout.css";
+
+@import "./styles/construct-menu-base.css";
+
+@import "./styles/construct-workspace.css";
+@import "./styles/construct-workspace-menu.css";
+
+@import "./styles/construct-fullscreen.css";
+@import "./styles/construct-toolbar.css";
+@import "./styles/construct-floating-panel.css";
+
+@import "./styles/construct-nodes.css";
+@import "./styles/construct-node-menu.css";
+
+@import "./styles/construct-connections.css";
+@import "./styles/construct-connection-menu.css";
+
+@import "./styles/construct-text-label.css";
+@import "./styles/construct-text-label-menu.css";
+
+@import "./styles/construct-zones.css";
+@import "./styles/construct-zone-menu.css";
+
+@import "./styles/construct-selection-box.css";
+@import "./styles/construct-multiselect-menu.css";

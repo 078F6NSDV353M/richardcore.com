@@ -1,0 +1,23 @@
+html,
+body {
+  height: 100%;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+}
+
+.app-container {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  padding: 0;
+}

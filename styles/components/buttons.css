@@ -1,0 +1,82 @@
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: var(--space-xs) var(--space-sm);
+
+  border: var(--border-thin) solid var(--site-button-border, var(--border-default));
+  border-radius: var(--radius-sm);
+
+  background: var(--site-button-bg, var(--bg-elevated));
+  color: var(--site-button-text, var(--text-primary));
+
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+/* Default hover */
+.button:hover {
+  background: var(--site-button-hover-bg, var(--bg-app));
+  border-color: var(--site-button-hover-border, var(--border-strong));
+}
+
+/* PRIMARY */
+.button-primary {
+  background: var(--site-button-primary-bg, var(--accent-primary));
+  color: var(--site-button-primary-text, #fff);
+  border-color: var(--site-button-primary-border, var(--accent-primary));
+}
+
+.button-primary:hover {
+  background: var(--site-button-primary-hover-bg, var(--accent-primary-hover));
+  border-color: var(--site-button-primary-hover-border, var(--accent-primary-hover));
+}
+
+/* SECONDARY */
+.button-secondary {
+  background: transparent;
+  color: var(--site-button-secondary-text, var(--text-primary));
+  border-color: var(--site-button-secondary-border, var(--border-strong));
+}
+
+.button-secondary:hover {
+  background: var(--site-button-secondary-hover-bg, var(--bg-surface));
+}
+
+/* GHOST */
+.button-ghost {
+  background: transparent;
+  border-color: transparent;
+  color: var(--site-button-ghost-text, var(--text-secondary));
+}
+
+.button-ghost:hover {
+  background: var(--site-button-ghost-hover-bg, var(--bg-surface));
+  color: var(--site-button-ghost-hover-text, var(--text-primary));
+}
+
+.button:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-pressed);
+}
+
+.button-primary:active {
+  transform: translateY(1px);
+  box-shadow: var(--shadow-pressed-strong);
+}
+
+.theme-toggle-button {
+  width: 28px;
+  height: 28px;
+  padding: 0;
+}
+
+.theme-toggle-button svg {
+  width: 20px;
+  height: 20px;
+}

@@ -1,0 +1,391 @@
+.construct-floating-panel-group {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+
+  z-index: 9999;
+
+  pointer-events: none;
+}
+
+.construct-floating-panel-group
+.construct-floating-panel {
+  position: static;
+  inset: auto;
+  transform: none;
+}
+
+.construct-floating-panel-group
+.construct-floating-search-panel {
+  margin-left: auto;
+}
+
+.construct-floating-panel,
+.construct-floating-search-panel {
+  pointer-events: auto;
+}
+
+.construct-floating-panel {
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  z-index: 350;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  padding: 6px;
+  box-sizing: border-box;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: transparent;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.construct-floating-panel button {
+  height: 20px;
+  padding: 0 10px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 3px;
+
+  font: inherit;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-floating-panel button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-floating-panel button:active {
+  transform: translateY(1px);
+}
+
+.construct-floating-panel-file {
+  display: none;
+}
+
+.construct-floating-panel-separator {
+  width: 1px;
+  min-width: 1px;
+
+  align-self: stretch;
+
+  background:
+    var(--construct-connection-border-strong);
+
+  opacity: 0.35;
+}
+
+/* ================================= Search / Zoom panel ================================= */
+
+.construct-floating-search-panel {
+  padding: 6px;
+  box-sizing: border-box;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: transparent;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.construct-floating-zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.construct-floating-zoom-controls button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 3px;
+
+  font: inherit;
+  font-size: 11px;
+  font-weight: 600;
+  line-height: 1;
+
+  cursor: pointer;
+
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-floating-zoom-controls button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-floating-zoom-controls button:active {
+  transform: translateY(1px);
+}
+
+.construct-floating-zoom-input {
+  width: 54px;
+  height: 20px;
+  padding: 0 6px;
+  box-sizing: border-box;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-node-bg-image);
+  border-radius: 3px;
+
+  text-align: center;
+
+  font: inherit;
+  font-size: 10px;
+  font-weight: 500;
+
+  outline: none;
+}
+
+.construct-floating-zoom-input:focus {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-floating-panel-search {
+  width: 100px;
+  height: 20px;
+  padding: 0 10px;
+  box-sizing: border-box;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: var(--construct-node-bg-image);
+  border-radius: 3px;
+
+  font: inherit;
+  font-size: 10px;
+  font-weight: 500;
+
+  outline: none;
+}
+
+.construct-floating-panel-search:focus {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-border-strong);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-floating-panel-search::-webkit-search-cancel-button {
+  filter:
+    grayscale(1)
+    brightness(10);
+
+  cursor: pointer;
+}
+
+[data-theme="light"]
+.construct-floating-panel-search::-webkit-search-cancel-button {
+  filter:
+    grayscale(1)
+    brightness(0);
+}
+
+/* ================================= Search match ================================= */
+
+.construct-node.is-search-match {
+  box-shadow:
+    0 0 12px 0 var(--construct-connection-selected-shadow);
+}
+
+.construct-search-active .construct-nodes::before {
+  content: "";
+  position: absolute;
+  inset: -100000px;
+
+  z-index: 10;
+
+  background: rgba(0, 0, 0, 0.7);
+
+  pointer-events: none;
+}
+
+.construct-search-active
+.construct-node:not(.construct-node-group).is-search-match {
+  z-index: 20;
+}
+
+.construct-search-active
+.construct-node:not(.construct-node-group).is-search-match.is-selected {
+  z-index: 20;
+}
+
+.construct-search-active
+.construct-node:not(.construct-node-group).is-search-match.is-editing {
+  z-index: 20;
+}
+
+.construct-search-active
+.construct-node.is-search-match {
+  box-shadow:
+    0 0 18px 4px var(--construct-connection-selected-shadow);
+}
+
+.construct-search-active .construct-floating-panel-group {
+  z-index: 30;
+}
+
+.construct-storage-indicator {
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.construct-storage-bar {
+  width: 100%;
+  height: 8px;
+
+  overflow: hidden;
+
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.construct-storage-fill {
+  width: 0%;
+  height: 100%;
+
+  border-radius: inherit;
+
+  background: #4d7cff;
+
+  transition: width 120ms linear;
+}
+
+.construct-storage-text {
+  font-size: 11px;
+  line-height: 1;
+
+  opacity: 0.72;
+}
+
+.construct-project-label {
+  height: 34px;
+
+  display: flex;
+  align-items: center;
+
+  color: var(--construct-connection-menu-text);
+
+  font-size: 16px;
+  font-weight: 500;
+
+  opacity: 0.7;
+
+  white-space: nowrap;
+
+  pointer-events: none;
+}
+
+.construct-floating-zoom-controls button[data-action="fit"] {
+  width: auto;
+  min-width: 36px;
+  padding: 0 8px;
+}
+
+.construct-floating-file-menu {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+.construct-floating-file-dropdown {
+  position: absolute;
+  z-index: 999999;
+
+  width: 148px;
+}
+
+.construct-floating-file-dropdown[hidden] {
+  display: none;
+}
+
+.construct-floating-icon-button svg {
+  width: 14px;
+  height: 14px;
+
+  stroke-width: 2.2;
+}
+
+.construct-floating-icon-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  line-height: 0;
+}
+
+.construct-floating-autosave {
+  height: 20px;
+  margin-left: 6px;
+
+  display: flex;
+  align-items: center;
+  gap: 4px;
+
+  color: var(--construct-connection-menu-text);
+
+  font-size: 10px;
+  font-weight: 500;
+
+  white-space: nowrap;
+}
+
+.construct-floating-zoom-controls button svg {
+  width: 14px;
+  height: 14px;
+}

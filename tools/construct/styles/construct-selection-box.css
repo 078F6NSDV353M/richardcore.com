@@ -1,0 +1,12 @@
+.construct-selection-box {
+  position: absolute;
+  z-index: 9999;
+
+  border: 1px solid
+    var(--construct-connection-default);
+
+  background:
+    rgba(43, 111, 201, 0.089);
+
+  pointer-events: none;
+}

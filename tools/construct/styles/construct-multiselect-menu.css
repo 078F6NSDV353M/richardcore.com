@@ -1,0 +1,10 @@
+.construct-multiselect-menu {
+  position: absolute;
+  z-index: 999999;
+
+  width: 148px;
+}
+
+.construct-multiselect-menu[hidden] {
+  display: none;
+}

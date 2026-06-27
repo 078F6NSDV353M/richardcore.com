@@ -1,0 +1,179 @@
+.construct-menu {
+  padding: 6px;
+  box-sizing: border-box;
+
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid var(--construct-connection-menu-border);
+  background: transparent;
+  border-radius: 6px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.35);
+
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.construct-menu[hidden] {
+  display: none;
+}
+
+.construct-menu-label {
+  padding: 2px 4px 0;
+  margin-bottom: 8px;
+
+  color: var(--construct-connection-menu-text);
+
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 1;
+
+  opacity: 0.65;
+
+  display: block;
+  width: 100%;
+
+  text-align: left;
+}
+
+.construct-menu-separator {
+  width: 100%;
+  height: 1px;
+  margin: 6px 0;
+
+  background: var(--construct-connection-menu-border);
+  opacity: 0.5;
+}
+
+.construct-menu-button {
+  width: 100%;
+  height: 20px;
+  padding: 0 8px;
+  box-sizing: border-box;
+
+  color: var(--construct-connection-menu-text);
+  border: 1px solid transparent;
+  background: transparent;
+  border-radius: 3px;
+
+  text-align: left;
+
+  font: inherit;
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 1;
+
+  display: flex;
+  align-items: center;
+  gap: 6px;   
+
+  cursor: pointer;
+
+  transition:
+    color var(--construct-connection-transition-fast),
+    border-color var(--construct-connection-transition-fast),
+    background var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-menu-button svg {
+  width: 14px;
+  height: 14px;
+
+  flex-shrink: 0;
+}
+
+.construct-menu-button span {
+  flex: 1;
+}
+
+.construct-menu-button:hover {
+  color: var(--construct-connection-text-primary);
+  border-color: var(--construct-connection-menu-border);
+  background: var(--construct-connection-menu-button-hover-bg);
+}
+
+.construct-menu-button:active {
+  transform: translateY(1px);
+}
+
+.construct-menu-button-danger {
+  color: var(--construct-connection-menu-danger-text);
+}
+
+.construct-menu-button-danger:hover {
+  color: var(--construct-connection-menu-danger-hover-text);
+  border-color: rgba(239, 68, 68, 0.6);
+  background: var(--construct-connection-menu-danger-hover-bg);
+}
+
+.construct-menu-color-grid {
+  display: grid;
+  grid-template-columns:
+    repeat(4, 20px)
+    1px
+    20px;
+
+  grid-template-rows:
+    repeat(3, 20px);
+
+  justify-content: center;
+  gap: 6px;
+}
+
+.construct-menu-color-button {
+  width: 20px;
+  height: 20px;
+  padding: 0;
+
+  border: 2px solid transparent;
+  border-color: rgba(128, 128, 128, 0.5);
+  background: transparent;
+  border-radius: 999px;
+
+  cursor: pointer;
+
+  transition:
+    border-color var(--construct-connection-transition-fast),
+    transform var(--construct-connection-transition-fast);
+}
+
+.construct-menu-color-button:hover {
+  border-color: rgba(255, 255, 255, 0.55);
+  transform: scale(1.08);
+}
+
+.construct-menu-color-grid::before {
+  content: "";
+
+  grid-column: 5;
+  grid-row: 1 / span 3;
+
+  width: 1px;
+  height: 100%;
+
+  background: var(--construct-connection-menu-border);
+  opacity: 0.75;
+}
+
+.construct-menu-color-button[data-color="#FFFFFF"],
+.construct-menu-color-button[data-color="#ffffff"],
+.construct-menu-color-button[data-value="#FFFFFF"],
+.construct-menu-color-button[data-value="#ffffff"] {
+  grid-column: 6;
+  grid-row: 1;
+}
+
+.construct-menu-color-button[data-color="#808080"],
+.construct-menu-color-button[data-value="#808080"] {
+  grid-column: 6;
+  grid-row: 2;
+}
+
+.construct-menu-color-button[data-color="#000000"],
+.construct-menu-color-button[data-value="#000000"] {
+  grid-column: 6;
+  grid-row: 3;
+}

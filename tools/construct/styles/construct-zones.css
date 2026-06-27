@@ -1,0 +1,203 @@
+.construct-zone {
+  position: absolute;
+
+  border-radius: 11px;
+
+  background: transparent;
+
+  pointer-events: auto;
+
+  --construct-zone-color:
+    var(--construct-connection-default);
+}
+
+.construct-zone.is-selected::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(255, 255, 255, 0.03);
+
+  border-radius: 11px;
+
+  pointer-events: none;
+}
+
+.construct-zone.is-circle.is-selected::before {
+  border-radius: 99999px;
+}
+
+.construct-zone-corner {
+  position: absolute;
+
+  width: 18px;
+  height: 18px;
+
+  display: none;
+
+  pointer-events: auto;
+}
+
+.construct-zone.is-selected
+.construct-zone-corner {
+  display: block;
+}
+
+.construct-zone-corner-tl {
+  top: -6px;
+  left: -6px;
+
+  cursor: nwse-resize;
+}
+
+.construct-zone-corner-tr {
+  top: -6px;
+  right: -6px;
+
+  cursor: nesw-resize;
+}
+
+.construct-zone-corner-br {
+  right: -6px;
+  bottom: -6px;
+
+  cursor: nwse-resize;
+}
+
+.construct-zone-corner-bl {
+  bottom: -6px;
+  left: -6px;
+
+  cursor: nesw-resize;
+}
+
+.construct-zone-svg {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  overflow: visible;
+  pointer-events: none;
+}
+
+.construct-zone-rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+
+  rx: 10px;
+  ry: 10px;
+
+  fill: none;
+  stroke: var(--construct-zone-color);
+  stroke-width: 2;
+
+}
+
+.construct-zone.is-circle .construct-zone-rect {
+  rx: 50%;
+  ry: 50%;
+}
+
+.construct-zone-rect-inner {
+  x: 6px;
+  y: 6px;
+  width: calc(100% - 12px);
+  height: calc(100% - 12px);
+
+  rx: 4px;
+  ry: 4px;
+
+  fill: none;
+  stroke: var(--construct-zone-color);
+  stroke-width: 2;
+
+  display: none;
+}
+
+.construct-zone.is-circle .construct-zone-rect-inner {
+  rx: 50%;
+  ry: 50%;
+}
+
+.construct-zone-corner svg {
+  display: none;
+}
+
+.construct-zone-corner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  width: 0;
+  height: 0;
+}
+
+.construct-zone-corner-tl::before {
+  border-top:
+    18px solid var(--construct-connection-menu-text);
+
+  border-right:
+    18px solid transparent;
+}
+
+.construct-zone-corner-tr::before {
+  border-top:
+    18px solid var(--construct-connection-menu-text);
+
+  border-left:
+    18px solid transparent;
+}
+
+.construct-zone-corner-br::before {
+  border-bottom:
+    18px solid var(--construct-connection-menu-text);
+
+  border-left:
+    18px solid transparent;
+}
+
+.construct-zone-corner-bl::before {
+  border-bottom:
+    18px solid var(--construct-connection-menu-text);
+
+  border-right:
+    18px solid transparent;
+}
+
+.construct-zone-title {
+  position: absolute;
+  left: 50%;
+  bottom: 100%;
+  margin-bottom: 6px;
+
+  width: max-content;
+  max-width: none;
+  padding: 0 4px;
+  box-sizing: border-box;
+
+  color: var(--text-primary);
+  background: transparent;
+
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 1.2;
+  text-align: center;
+  white-space: nowrap;
+
+  overflow: visible;
+
+  transform: translateX(-50%);
+
+  cursor: text;
+  user-select: none;
+}
+
+.construct-zone-title.is-editing {
+  outline: none;
+  user-select: text;
+}
