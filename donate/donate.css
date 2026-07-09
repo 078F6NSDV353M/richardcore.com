@@ -74,6 +74,9 @@
 }
 
 .crypto-card {
+  appearance: none;
+  -webkit-appearance: none;
+
   aspect-ratio: 1 / 1;
 
   display: flex;
@@ -100,6 +103,8 @@
     background var(--transition-fast),
     border-color var(--transition-fast),
     transform var(--transition-fast);
+
+  overflow: hidden;  
 }
 
 .crypto-card:hover {
@@ -109,12 +114,14 @@
 }
 
 .crypto-card img {
-  width: 70%;
-  height: 70%;
+  display: block;
 
-  border-radius: var(--radius-sm);
+  width: 112px;
+  height: 112px;
 
   object-fit: contain;
+
+  border-radius: var(--radius-sm);
 }
 
 .crypto-modal {

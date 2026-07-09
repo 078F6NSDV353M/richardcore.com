@@ -1,5 +1,9 @@
 .app-header {
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+
   border-bottom: var(--border-thin) solid var(--border-default);
   background: var(--site-header-bg, var(--bg-surface));
   z-index: 100;

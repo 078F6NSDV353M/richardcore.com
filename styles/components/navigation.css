@@ -2,17 +2,43 @@
   display: flex;
   align-items: center;
   gap: var(--space-md);
-  margin-left: 0;
+
   margin-top: var(--space-xs);
 }
 
-.nav-link {
-  text-decoration: none;
+.nav-link,
+.nav-link:link,
+.nav-link:visited,
+.nav-link:active,
+.nav-link:focus {
   color: var(--text-secondary);
-  font-size: var(--font-size-md);
+  text-decoration: none;
+
+  -webkit-text-fill-color: var(--text-secondary);
+  -webkit-tap-highlight-color: transparent;
+
   transition: color var(--transition-fast);
 }
 
-.nav-link:hover {
+.nav-link:hover,
+.nav-link:focus-visible {
   color: var(--text-primary);
+  -webkit-text-fill-color: var(--text-primary);
+}
+
+.dropdown-link,
+.dropdown-link:link,
+.dropdown-link:visited,
+.dropdown-link:active,
+.dropdown-link:focus {
+  color: var(--text-secondary);
+
+  -webkit-text-fill-color: var(--text-secondary);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.dropdown-link:hover,
+.dropdown-link:focus-visible {
+  color: var(--text-primary);
+  -webkit-text-fill-color: var(--text-primary);
 }
