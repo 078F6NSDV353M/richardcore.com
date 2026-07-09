@@ -1,0 +1,72 @@
+.contacts-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 100%;
+  min-height: 100%;
+
+  padding: var(--space-xl) var(--space-lg);
+  box-sizing: border-box;
+}
+
+.contacts-inner {
+  width: min(100%, 720px);
+
+  text-align: center;
+}
+
+.contacts-title {
+  margin: 0 0 var(--space-lg);
+
+  color: var(--text-primary);
+
+  font-size: clamp(32px, 5vw, 56px);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.1;
+}
+
+.contacts-description {
+  margin: 0 0 56px;
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-md);
+  line-height: 1.7;
+}
+
+.contacts-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.contact-item {
+  padding: var(--space-lg) 0;
+
+  border-top: var(--border-thin) solid var(--border-default);
+}
+
+.contact-item:last-child {
+  border-bottom: var(--border-thin) solid var(--border-default);
+}
+
+.contact-label {
+  margin-bottom: var(--space-xs);
+
+  color: var(--text-secondary);
+
+  font-size: var(--font-size-sm);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.contact-value {
+  color: var(--text-primary);
+
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-medium);
+}
+
+.contact-item {
+  text-align: center;
+}

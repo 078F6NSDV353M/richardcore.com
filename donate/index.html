@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RichardCore</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="../styles/base/tokens.css">
+  <link rel="stylesheet" href="../styles/base/themes.css">
+  <link rel="stylesheet" href="../styles/style.css" />
+  <link rel="stylesheet" href="./donate.css">
+</head>
+<body>
+  <div id="header-root"></div>
+
+  <main>
+    <section class="donate-page">
+        <div class="donate-inner">
+
+        <h1 class="donate-title">
+            Support Richard&lt;CORE&gt;
+        </h1>
+
+        <p class="donate-description">
+            Support independent development of Richard&lt;CORE&gt;
+            and its browser-based tools.
+        </p>
+
+        <section class="donate-crypto-section">
+            <h2 class="donate-section-title">Crypto</h2>
+
+            <div class="crypto-grid">
+
+            <button class="crypto-card" data-crypto="btc" type="button">
+                <img src="../assets/images/donate/crypto/don_btc.webp" alt="Bitcoin QR">
+                <span>Bitcoin</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="eth" type="button">
+                <img src="../assets/images/donate/crypto/don_eth.webp" alt="Ethereum QR">
+                <span>Ethereum</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="usdt" type="button">
+                <img src="../assets/images/donate/crypto/don_usdt.webp" alt="USDT QR">
+                <span>USDT</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="usdc" type="button">
+                <img src="../assets/images/donate/crypto/don_usdc.webp" alt="USDC QR">
+                <span>USDC</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="sol" type="button">
+                <img src="../assets/images/donate/crypto/don_sol.webp" alt="Solana QR">
+                <span>Solana</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="ton" type="button">
+                <img src="../assets/images/donate/crypto/don_ton.webp" alt="TON QR">
+                <span>TON</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="ltc" type="button">
+                <img src="../assets/images/donate/crypto/don_ltc.webp" alt="Litecoin QR">
+                <span>Litecoin</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="doge" type="button">
+                <img src="../assets/images/donate/crypto/don_doge.webp" alt="Dogecoin QR">
+                <span>Dogecoin</span>
+            </button>
+
+            <button class="crypto-card" data-crypto="trx" type="button">
+                <img src="../assets/images/donate/crypto/don_trx.webp" alt="Tron QR">
+                <span>Tron</span>
+            </button>
+
+            </div>
+        </section>
+
+        </div>
+    </section>
+
+    <div class="crypto-modal" id="crypto-modal" aria-hidden="true">
+        <div class="crypto-modal-backdrop" data-modal-close></div>
+
+        <div class="crypto-modal-panel">
+        <button class="crypto-modal-close" data-modal-close type="button">
+            ×
+        </button>
+
+        <h2 class="crypto-modal-title" id="crypto-modal-title"></h2>
+
+        <img class="crypto-modal-qr" id="crypto-modal-qr" src="" alt="">
+
+        <div class="crypto-address-box">
+            <code id="crypto-modal-address"></code>
+        </div>
+
+        <button class="button button-primary" id="crypto-copy-button" type="button">
+            Copy address
+        </button>
+        </div>
+    </div>
+  </main>
+
+  <div id="footer-root"></div>
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <script type="module" src="../main.js"></script>
+  <script type="module" src="./donate.js"></script>
+</body>
+</html>

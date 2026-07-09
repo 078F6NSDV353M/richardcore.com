@@ -7,7 +7,8 @@ import {
   state,
   BASE_GRID_SIZE,
   getGrid,
-  createHistorySnapshot
+  createHistorySnapshot,
+  isHistoryTransactionActive
 } from "../hub.js";
 
 export function initHistoryRuntime({
@@ -43,6 +44,8 @@ export function initHistoryRuntime({
     });
   }
 
+  let historySaveScheduled = false;
+
   window.addEventListener(
     "construct:workspace-changed",
     () => {
@@ -51,9 +54,22 @@ export function initHistoryRuntime({
         return;
       }
 
-      pushHistoryState(
-        createHistorySnapshot()
-      );
+      if (historySaveScheduled) {
+        return;
+      }
+
+      historySaveScheduled = true;
+
+      queueMicrotask(() => {
+
+        historySaveScheduled = false;
+
+        pushHistoryState(
+          createHistorySnapshot()
+        );
+
+      });
+
     }
   );
 

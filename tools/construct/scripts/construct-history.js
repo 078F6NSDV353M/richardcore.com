@@ -10,7 +10,8 @@ const historyState = {
   undoStack: [],
   redoStack: [],
   isRestoring: false,
-  topSnapshot: null
+  topSnapshot: null,
+  transactionDepth: 0
 };
 
 export function cloneSnapshot(snapshot) {
@@ -303,6 +304,34 @@ export function canUndoHistory() {
 export function canRedoHistory() {
   return (
     historyState.redoStack.length > 0
+  );
+}
+
+export function beginHistoryTransaction() {
+  historyState.transactionDepth++;
+}
+
+export function endHistoryTransaction(
+  snapshot
+) {
+  if (historyState.transactionDepth === 0) {
+    return;
+  }
+
+  historyState.transactionDepth--;
+
+  if (
+    historyState.transactionDepth !== 0
+  ) {
+    return;
+  }
+
+  pushHistoryState(snapshot);
+}
+
+export function isHistoryTransactionActive() {
+  return (
+    historyState.transactionDepth > 0
   );
 }
 

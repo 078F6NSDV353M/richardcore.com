@@ -64,3 +64,5 @@ export * from "./scripts/construct-workspace-actions.js";
 export * from "./scripts/construct-workspace-restore.js";
 export * from "./scripts/construct-zones.js";
 export * from "./scripts/construct-delete.js";
+
+export * from "./scripts/construct-history.js";

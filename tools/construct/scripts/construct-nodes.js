@@ -642,33 +642,50 @@ export function toggleGroupCollapse(
   }
 }
 
-window.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    closeNodeContextMenu();
-    closeAllNodeEditModes(getNodeDataFromElement);
-    return;
-  }
+// window.addEventListener("keydown", (event) => {
+//   if (event.key === "Escape") {
+//     closeNodeContextMenu();
+//     closeAllNodeEditModes(getNodeDataFromElement);
+//     return;
+//   }
 
-  const isDeleteKey =
-    event.key === "Delete" ||
-    event.key === "Backspace";
+//   const isDeleteKey =
+//     event.key === "Delete" ||
+//     event.key === "Backspace";
 
-  if (!isDeleteKey) {
-    return;
-  }
+//   if (!isDeleteKey) {
+//     return;
+//   }
 
-  const activeElement = document.activeElement;
+//   const activeElement = document.activeElement;
 
-  if (
-    activeElement &&
-    (
-      activeElement.isContentEditable ||
-      activeElement.tagName === "INPUT" ||
-      activeElement.tagName === "TEXTAREA"
-    )
-  ) {
-    return;
-  }
+//   if (
+//     activeElement &&
+//     (
+//       activeElement.isContentEditable ||
+//       activeElement.tagName === "INPUT" ||
+//       activeElement.tagName === "TEXTAREA"
+//     )
+//   ) {
+//     return;
+//   }
 
-  event.preventDefault();
-});
+//   event.preventDefault();
+
+//   const selectedNodes =
+//     getSelectedNodeElements(state);
+
+//   selectedNodes.forEach((nodeEl) => {
+//     handleNodeMenuAction(
+//       "Delete",
+//       nodeEl,
+//       state,
+//       getNodeDataFromElement,
+//       removeConnection,
+//       {
+//         createNode,
+//         getSelectedNodeElements
+//       }
+//     );
+//   });
+// });

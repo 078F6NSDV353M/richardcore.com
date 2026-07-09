@@ -51,3 +51,9 @@
   justify-content: center;
   gap: 2px;
 }
+
+@media (max-width: 768px) {
+  #utc-clock {
+    display: none;
+  }
+}
