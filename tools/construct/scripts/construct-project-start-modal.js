@@ -97,6 +97,23 @@ export async function showProjectStartModal({
 
     stage.appendChild(overlay);
 
+    [
+      "mousedown",
+      "mouseup",
+      "click",
+      "dblclick",
+      "pointerdown",
+      "pointerup"
+    ].forEach((eventName) => {
+      overlay.addEventListener(
+        eventName,
+        (event) => {
+          event.stopPropagation();
+        },
+        true
+      );
+    });
+
     autosaveInput?.addEventListener(
       "change",
       () => {
