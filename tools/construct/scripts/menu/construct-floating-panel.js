@@ -183,7 +183,7 @@ export function initFloatingPanel({
     "construct-project-label";
 
   projectLabel.textContent =
-    "No project";  
+    "Demo project";  
 
   panelGroup.className =
     "construct-floating-panel-group";
@@ -1169,7 +1169,7 @@ export function initFloatingPanel({
       document.body.dataset.projectName;
 
     projectLabel.textContent =
-      name || "No project";
+      name || "Demo project";
   }
 
   updateProjectLabel();
