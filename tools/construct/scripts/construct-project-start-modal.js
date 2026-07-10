@@ -97,23 +97,26 @@ export async function showProjectStartModal({
 
     stage.appendChild(overlay);
 
-    [
-      "mousedown",
-      "mouseup",
-      "click",
-      "dblclick",
-      "pointerdown",
-      "pointerup"
-    ].forEach((eventName) => {
-      overlay.addEventListener(
-        eventName,
-        (event) => {
-          event.stopPropagation();
-        },
-        true
-      );
+    overlay.addEventListener("mousedown", (event) => {
+      if (event.target === overlay) {
+        event.stopPropagation();
+      }
     });
 
+    overlay.addEventListener("dblclick", (event) => {
+      if (event.target === overlay) {
+        event.stopPropagation();
+      }
+    });
+
+    overlay.addEventListener("contextmenu", (event) => {
+      if (event.target === overlay) {
+        event.preventDefault();
+        event.stopPropagation();
+      }
+    });
+
+    
     autosaveInput?.addEventListener(
       "change",
       () => {
@@ -124,6 +127,12 @@ export async function showProjectStartModal({
     );
 
     overlay.addEventListener("click", async (event) => {
+      if (event.target === overlay) {
+        event.stopPropagation();
+        event.preventDefault();
+        return;
+      }
+
       const button =
         event.target.closest("button");
 
