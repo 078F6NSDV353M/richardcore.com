@@ -1,0 +1,2500 @@
+{
+  "app": "RichardCore.ConStruct",
+  "version": 1,
+  "zoom": 0.12262592363851126,
+  "panX": 876.6114634616633,
+  "panY": 413.41635208177047,
+  "gridMode": "lines",
+  "nodes": [
+    {
+      "id": 1,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-29px",
+      "top": "0px",
+      "width": "300px",
+      "height": "175px",
+      "color": "rgb(255, 54, 54)",
+      "title": "ConStruct",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "A visual node workspace for building, connecting, organizing, and saving project information.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 2,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1565px",
+      "top": "0px",
+      "width": "330px",
+      "height": "175px",
+      "color": "rgb(87, 104, 255)",
+      "title": "What Can I Use It For?",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Examples of what ConStruct can help you organize and plan.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 3,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2335px",
+      "top": "0px",
+      "width": "330px",
+      "height": "175px",
+      "color": "rgb(255, 128, 0)",
+      "title": "How Do I Use It?",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "A practical guide to the workspace, nodes, connections, images, files, and shortcuts.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 4,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-950px",
+      "top": "-400px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Knowledge Base",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Collect notes, references, and decisions in one connected structure.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 5,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1550px",
+      "top": "-400px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Project Planning",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Break a project into goals, tasks, dependencies, and milestones.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2050px",
+      "top": "-400px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Mind Mapping",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Explore ideas freely and connect them as the structure becomes clearer.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 7,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2050px",
+      "top": "0px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Research",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Store findings, sources, screenshots, and observations around one topic.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 8,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2050px",
+      "top": "400px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Documentation",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Create structured documentation with connected sections and examples.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 9,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1550px",
+      "top": "400px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Game Design",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Plan mechanics, levels, UI ideas, assets, and release steps.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 10,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-950px",
+      "top": "400px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Example Project",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "A small live example that shows how a real project can be structured.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 11,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-787px",
+      "top": "-700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Topic Notes",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use text nodes to separate topics, definitions, and explanations.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 12,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1083px",
+      "top": "-700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Linked Decisions",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Connect decisions to the reasons, references, and tasks behind them.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 13,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1387px",
+      "top": "-700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Goals And Tasks",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Turn a broad goal into smaller connected work items.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 14,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1682px",
+      "top": "-700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Dependencies",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use connections to show what depends on what.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 15,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2034px",
+      "top": "-700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Free Exploration",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Start with rough ideas and rearrange them as the map grows.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 16,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2435px",
+      "top": "-400px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Idea Clusters",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Place related ideas near each other and connect the important links.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 17,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2435px",
+      "top": "-112px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Sources",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Keep links, notes, and screenshots close to the topic they support.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 18,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2435px",
+      "top": "110px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Findings",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Separate raw information from conclusions and next actions.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 19,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2434px",
+      "top": "400px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Sections",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use nodes as document sections that can be expanded or reorganized.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 20,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-2035px",
+      "top": "700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Examples",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Attach screenshots, diagrams, and references near the explanation.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 21,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1682px",
+      "top": "700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Mechanics",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Map systems, rules, player actions, and progression.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 22,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1388px",
+      "top": "700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Assets",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Collect references, mockups, UI drafts, and visual notes.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 23,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-1082px",
+      "top": "700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Building ConStruct",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "A sample project about ConStruct itself: features, UI, files, feedback, and release notes.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 24,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-788px",
+      "top": "700px",
+      "width": "270px",
+      "height": "145px",
+      "color": "rgb(255, 128, 0)",
+      "title": "Release Plan",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "A simple roadmap: beta, testing, fixes, and public release.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 25,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3026px",
+      "top": "-6px",
+      "width": "348.268px",
+      "height": "212.907px",
+      "color": "rgb(155, 48, 255)",
+      "title": "Start Here",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "The shortest path for learning the basic workflow.\n\nFollow these steps first if this is your first time using ConStruct.\nThis branch shows the basic workflow from project creation to saving.\n",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 26,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1577px",
+      "top": "-683px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Workspace",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "How to move around the canvas and manage the view.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 27,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3381px",
+      "top": "-1207px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Nodes",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "How to create, edit, move, resize, and manage nodes.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 28,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2350px",
+      "top": "1300px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Connections",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "How to link nodes and show relationships between them.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 29,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3952px",
+      "top": "544px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Images",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "How to add and edit visual content inside image nodes.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 30,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2199px",
+      "top": "-1266px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Project Files",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "How to create, save, open, and export projects.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 31,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1427px",
+      "top": "306px",
+      "width": "300px",
+      "height": "160px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Keyboard Shortcuts",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Fast actions for editing, navigation, saving, and cleanup.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 32,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2592px",
+      "top": "-805px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(255, 234, 0)",
+      "title": "1. Create Project",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Start by creating a project in its own dedicated project folder.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 33,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3388px",
+      "top": "-800px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(255, 234, 0)",
+      "title": "2. Create Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Right-click the workspace and create your first node.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 34,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3777px",
+      "top": "-46px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(255, 234, 0)",
+      "title": "3. Add Content",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Write text, add images, or combine content depending on the node type.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 35,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3265px",
+      "top": "890px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(255, 234, 0)",
+      "title": "4. Connect Nodes",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Drag from a node port to another node to show a relationship.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 36,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2631px",
+      "top": "887px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(255, 234, 0)",
+      "title": "5. Save Work",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Save changes to the current project. Autosave can update the project file while you work.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 37,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1926px",
+      "top": "660px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(255, 234, 0)",
+      "title": "6. Use Shortcuts",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use keyboard shortcuts for faster editing, undo, redo, copy, paste, and delete.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 38,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1255px",
+      "top": "-1210px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Zoom",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use the mouse wheel to zoom in for details or zoom out for the full map.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 39,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "825px",
+      "top": "-257px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Pan",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Middle Mouse Button.\nMove across the workspace without changing the project layout.\n",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 40,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "909px",
+      "top": "-574px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Search",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Find nodes by text and jump to the content you need.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 42,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3703px",
+      "top": "-1663px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Create Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Right-click the workspace and choose the node type you want to create.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 43,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4037px",
+      "top": "-1403px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Edit Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Double-click a node to edit its title or content.\n\nClick outside the node to finish editing.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 44,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4288px",
+      "top": "-1112px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Move Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Drag a node to reposition it anywhere in the workspace.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 45,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4454px",
+      "top": "-840px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Resize Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use the resize handle when a node needs more or less space.\n\nDouble-click a node, then use the resize handle to change its size.\n",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 46,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4579px",
+      "top": "-534px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Lock Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Lock a node when you want to protect it from accidental movement or editing.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 47,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4649px",
+      "top": "-241px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Delete Node",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Select a node and delete it when it is no longer needed.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 48,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3065px",
+      "top": "1936px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Create Connection",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Drag from one node port to another node port to create a connection between related items.\n",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 49,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2654px",
+      "top": "1975px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Connection Direction",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Connections can show relationships, dependencies,\ninformation flow, or process order.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 50,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2245px",
+      "top": "1890px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Select Connection",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Select a connection to change its color, style, or remove it.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 51,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1842px",
+      "top": "1715px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Delete Connection",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Select a connection and press Delete or use the context menu to remove it.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 52,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4651px",
+      "top": "246px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Upload Images",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Add images directly from your device.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 53,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4580px",
+      "top": "540px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Paste Images",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Paste screenshots and copied images from the clipboard.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 54,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4449px",
+      "top": "856px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Import From URL",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Load an image from a web link.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 55,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "4225px",
+      "top": "1207px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Edit With Whiteboard",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Draw a new image from scratch or draw directly on an existing image.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 56,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3962px",
+      "top": "1479px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Visual References",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Keep screenshots, mockups, diagrams, and visual examples inside the project.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 57,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3620px",
+      "top": "1722px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Asset Collection",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Collect images, concepts, UI drafts, and project materials in one workspace.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 58,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1681px",
+      "top": "-1604px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Create Project",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Choose a folder and create a new project workspace.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 59,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2045px",
+      "top": "-1807px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Project Folder",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use a dedicated folder for each project to keep project files and images organized and separated from other projects.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 60,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2458px",
+      "top": "-1936px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Save Changes",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Save changes to the current project. Autosave updates the project file automatically while you work.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 61,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "2875px",
+      "top": "-1959px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Open Project",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Open an existing project by selecting its project folder, then choose the project file inside it.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 62,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "3264px",
+      "top": "-1868px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Export Project",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Create a portable copy for backup or transfer.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 63,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1469px",
+      "top": "1443px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Undo / Redo",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use undo and redo to move backward or forward through recent changes.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 64,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1182px",
+      "top": "1118px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Copy / Paste",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Copy and paste nodes or selected structures to build faster.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 65,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1009px",
+      "top": "829px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Delete",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Remove selected nodes or connections without using the context menu.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 66,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "889px",
+      "top": "526px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Save",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Save the current project from the keyboard when the shortcut is available.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 67,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "823px",
+      "top": "238px",
+      "width": "285px",
+      "height": "145px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Shortcut Reference",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use the hotkey list as the full reference for available keyboard actions.\n\nOpen the HOTKEYS reference to see the full list of available shortcuts.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 69,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "1487px",
+      "top": "-247px",
+      "width": "322.155px",
+      "height": "205.155px",
+      "color": "rgb(0, 255, 64)",
+      "title": "Zones",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "Use rectangular and circular zones to organize related items.\n\nAdd titles and customize colors and line styles to identify,\nhighlight, and separate different sections of your project.",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    },
+    {
+      "id": 70,
+      "type": "text",
+      "groupId": null,
+      "isCollapsed": false,
+      "children": [],
+      "left": "-138px",
+      "top": "300px",
+      "width": "518.564px",
+      "height": "1003.73px",
+      "color": "",
+      "title": "HOTKEYS",
+      "currentSide": "A",
+      "sides": {
+        "A": {
+          "text": "File\n\nCtrl + O ___________ Open Project\n\nCtrl + S ___________ Save\n\nCtrl + Shift + S ___ Save As\n\nCtrl + E ___________ Export PNG\n\n\nHistory\n\nCtrl + Z ___________ Undo\n\nCtrl + Shift + Z ___ Redo\n\n\nClipboard\n\nCtrl + C ___________ Copy Nodes\n\nCtrl + Shift + C ___ Copy Nodes With Connections\n\nCtrl + V ___________ Paste\n\n\nWorkspace\n\nCtrl + F ___________ Search node\nCtrl + Shift + E ___ Fit Workspace\n\nCtrl + Shift + F ___ Flip Side A/B\n\n\nNodes\n\nCtrl + Alt + T _____ Create Text Node\n\nCtrl + Alt + I _____ Create Image Node\n\nCtrl + Alt + M _____ Create Multi Node\n\nCtrl + A ___________ Select All Nodes\n\nDel / Backspace ____ Delete Selected Node(s)\n\nEscape _____________ Close Menus / Exit Edit Mode",
+          "image": "",
+          "whiteboard": []
+        },
+        "B": {
+          "text": "Enter your text",
+          "image": "",
+          "whiteboard": []
+        }
+      }
+    }
+  ],
+  "connections": [
+    {
+      "fromNodeId": 1,
+      "toNodeId": 3,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF3636"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 25,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 27,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 29,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 25,
+      "toNodeId": 34,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "straight",
+      "style": "double",
+      "color": "#9B30FF"
+    },
+    {
+      "fromNodeId": 37,
+      "toNodeId": 31,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "solid",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 32,
+      "toNodeId": 33,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "straight",
+      "style": "double",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 1,
+      "toNodeId": 2,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF3636"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 10,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 9,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 7,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 6,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 5,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 4,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 2,
+      "toNodeId": 8,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#5768FF"
+    },
+    {
+      "fromNodeId": 4,
+      "toNodeId": 11,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "bezier",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 4,
+      "toNodeId": 12,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "bezier",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 5,
+      "toNodeId": 13,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "bezier",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 5,
+      "toNodeId": 14,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "bezier",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 6,
+      "toNodeId": 15,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "bezier",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 6,
+      "toNodeId": 16,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 7,
+      "toNodeId": 17,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 7,
+      "toNodeId": 18,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 8,
+      "toNodeId": 20,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 9,
+      "toNodeId": 21,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 9,
+      "toNodeId": 22,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 10,
+      "toNodeId": 23,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 10,
+      "toNodeId": 24,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 8,
+      "toNodeId": 19,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 30,
+      "toNodeId": 62,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 30,
+      "toNodeId": 61,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 30,
+      "toNodeId": 60,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 30,
+      "toNodeId": 59,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 30,
+      "toNodeId": 58,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 26,
+      "toNodeId": 38,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 26,
+      "toNodeId": 40,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 26,
+      "toNodeId": 39,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 31,
+      "toNodeId": 67,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 31,
+      "toNodeId": 66,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 31,
+      "toNodeId": 65,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 28,
+      "toNodeId": 51,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 28,
+      "toNodeId": 50,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 28,
+      "toNodeId": 49,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 28,
+      "toNodeId": 48,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 29,
+      "toNodeId": 57,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 29,
+      "toNodeId": 56,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 29,
+      "toNodeId": 55,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 29,
+      "toNodeId": 54,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 29,
+      "toNodeId": 53,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 29,
+      "toNodeId": 52,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dotted",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 27,
+      "toNodeId": 47,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 27,
+      "toNodeId": 46,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 27,
+      "toNodeId": 45,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 27,
+      "toNodeId": 42,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 25,
+      "toNodeId": 33,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "straight",
+      "style": "double",
+      "color": "#9B30FF"
+    },
+    {
+      "fromNodeId": 25,
+      "toNodeId": 35,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "straight",
+      "style": "double",
+      "color": "#9B30FF"
+    },
+    {
+      "fromNodeId": 25,
+      "toNodeId": 36,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "straight",
+      "style": "double",
+      "color": "#9B30FF"
+    },
+    {
+      "fromNodeId": 25,
+      "toNodeId": 32,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "straight",
+      "style": "double",
+      "color": "#9B30FF"
+    },
+    {
+      "fromNodeId": 25,
+      "toNodeId": 37,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-right",
+      "type": "straight",
+      "style": "double",
+      "color": "#9B30FF"
+    },
+    {
+      "fromNodeId": 33,
+      "toNodeId": 34,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 34,
+      "toNodeId": 35,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 35,
+      "toNodeId": 36,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-right",
+      "type": "straight",
+      "style": "double",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 36,
+      "toNodeId": 37,
+      "fromPortClass": "construct-node-port-left",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "orthogonal",
+      "style": "double",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 34,
+      "toNodeId": 29,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "solid",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 33,
+      "toNodeId": 27,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "straight",
+      "style": "solid",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 35,
+      "toNodeId": 28,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "solid",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 27,
+      "toNodeId": 44,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 31,
+      "toNodeId": 63,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 31,
+      "toNodeId": 64,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "dashdot",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 31,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 30,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-bottom",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 32,
+      "toNodeId": 30,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-right",
+      "type": "orthogonal",
+      "style": "solid",
+      "color": "#FFEA00"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 28,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 26,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 27,
+      "toNodeId": 43,
+      "fromPortClass": "construct-node-port-right",
+      "toPortClass": "construct-node-port-left",
+      "type": "orthogonal",
+      "style": "dashed",
+      "color": "#00FF40"
+    },
+    {
+      "fromNodeId": 3,
+      "toNodeId": 69,
+      "fromPortClass": "construct-node-port-top",
+      "toPortClass": "construct-node-port-right",
+      "type": "bezier",
+      "style": "double",
+      "color": "#FF8000"
+    },
+    {
+      "fromNodeId": 1,
+      "toNodeId": 70,
+      "fromPortClass": "construct-node-port-bottom",
+      "toPortClass": "construct-node-port-top",
+      "type": "straight",
+      "style": "double",
+      "color": "#FF3636"
+    }
+  ],
+  "zones": [
+    {
+      "id": "62c32983-8fbe-498a-8951-0d0c667b27f8",
+      "title": "What Can I Use It For?",
+      "x": -2600,
+      "y": -800,
+      "width": 2265,
+      "height": 1800,
+      "color": "#FFEA00",
+      "style": "dashed",
+      "shape": "rect",
+      "locked": true
+    },
+    {
+      "id": "50c7d564-624d-4572-b2e4-1c78c654c673",
+      "title": "How Do I Use It?",
+      "x": 602,
+      "y": -2175,
+      "width": 4564,
+      "height": 4564,
+      "color": "#5768FF",
+      "style": "double",
+      "shape": "circle",
+      "locked": true
+    }
+  ],
+  "textLabels": []
+}

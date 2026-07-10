@@ -1,14 +1,12 @@
-export function createDemoProjectSnapshot() {
-  return {
-    app: "RichardCore.ConStruct",
-    version: 1,
+export async function createDemoProjectSnapshot() {
+  const response =
+    await fetch("./demo.construct");
 
-    zoom: 0.85,
-    panX: 120,
-    panY: 80,
-    gridMode: "dots",
+  if (!response.ok) {
+    throw new Error(
+      "Failed to load demo project."
+    );
+  }
 
-    nodes: [],
-    connections: []
-  };
+  return await response.json();
 }

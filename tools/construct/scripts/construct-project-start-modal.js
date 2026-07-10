@@ -212,8 +212,11 @@ export async function showProjectStartModal({
 
         if (action === "open-demo") {
 
+          const demoSnapshot =
+            await createDemoProjectSnapshot();
+
           restoreWorkspaceSnapshot?.(
-            createDemoProjectSnapshot()
+            demoSnapshot
           );
 
           overlay.remove();
