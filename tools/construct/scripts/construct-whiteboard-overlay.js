@@ -130,6 +130,7 @@ export function ensureWhiteboardOverlay() {
   window.addEventListener(
     "message",
     async (event) => {
+      console.log(event.data);
       const data =
         event.data;
 
@@ -273,6 +274,7 @@ export function openWhiteboardOverlay({
       "load",
       () => {
         frame.style.visibility = "";
+        frame.contentWindow?.scrollTo(0, 0);
 
         if (startImage) {
           frame.contentWindow?.postMessage(

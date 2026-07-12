@@ -54,8 +54,25 @@ body.whiteboard-embedded #footer-root {
   display: none;
 }
 
-body.whiteboard-embedded main {
+html,
+body.whiteboard-embedded,
+body.whiteboard-embedded main,
+body.whiteboard-embedded .app-container,
+body.whiteboard-embedded .whiteboard-page-shell,
+body.whiteboard-embedded .whiteboard-stage {
+  width: 100%;
   height: 100%;
+  min-height: 0;
+}
+
+body.whiteboard-embedded {
+  overflow: hidden;
+}
+
+body.whiteboard-embedded main {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
 }
 
 body.whiteboard-embedded .app-container {
@@ -73,6 +90,8 @@ body.whiteboard-embedded [data-standalone-only] {
 
 body.whiteboard-embedded .whiteboard-stage {
   padding: 0;
+  gap: 0;
+
   background: transparent;
   border-radius: 0;
 }
