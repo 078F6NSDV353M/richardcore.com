@@ -130,16 +130,16 @@ export async function renderGraphToPngDataUrl() {
       exportStage,
       {
         cacheBust: true,
-        pixelRatio: 2,
+        pixelRatio: 1,
 
         width: exportWidth,
         height: exportHeight,
 
         canvasWidth:
-          exportWidth * 2,
+          exportWidth,
 
         canvasHeight:
-          exportHeight * 2,
+          exportHeight,
 
         backgroundColor:
           "#111111",
@@ -218,13 +218,6 @@ export function initFloatingPanel({
     <button class="construct-menu-button" type="button" data-action="save-as">
       <i data-lucide="save-all"></i>
       <span>Save As</span>
-    </button>
-
-    <div class="construct-menu-separator"></div>
-
-    <button class="construct-menu-button" type="button" data-action="export-png">
-      <i data-lucide="image-down"></i>
-      <span>Export PNG</span>
     </button>
 
     <div class="construct-menu-separator"></div>
@@ -818,248 +811,255 @@ export function initFloatingPanel({
       return;
     }
 
-    if (action === "export-png") {
-      const stage =
-        document.querySelector(".construct-stage");
+    // if (action === "export-png") {
+    //   const stage =
+    //     document.querySelector(".construct-stage");
 
-      const world =
-        document.querySelector(".construct-world");
+    //   const world =
+    //     document.querySelector(".construct-world");
 
-      const exportItems =
-        [
-          ...document.querySelectorAll(".construct-node"),
-          ...document.querySelectorAll(".construct-text-label")
-        ];
+    //   const exportItems =
+    //     [
+    //       ...document.querySelectorAll(".construct-node"),
+    //       ...document.querySelectorAll(".construct-text-label")
+    //     ];
 
-      if (
-        !stage ||
-        !world ||
-        !exportItems.length ||
-        !window.htmlToImage
-      ) {
-        return;
-      }
+    //   if (
+    //     !stage ||
+    //     !world ||
+    //     !exportItems.length ||
+    //     !window.htmlToImage
+    //   ) {
+    //     return;
+    //   }
 
-      const EXPORT_PADDING = 120;
+    //   const EXPORT_PADDING = 120;
 
-      let minX = Infinity;
-      let minY = Infinity;
-      let maxX = -Infinity;
-      let maxY = -Infinity;
+    //   let minX = Infinity;
+    //   let minY = Infinity;
+    //   let maxX = -Infinity;
+    //   let maxY = -Infinity;
 
-      exportItems.forEach((node) => {
-        const left =
-          parseFloat(node.style.left) || 0;
+    //   exportItems.forEach((node) => {
+    //     const left =
+    //       parseFloat(node.style.left) || 0;
 
-        const top =
-          parseFloat(node.style.top) || 0;
+    //     const top =
+    //       parseFloat(node.style.top) || 0;
 
-        minX = Math.min(minX, left);
-        minY = Math.min(minY, top);
+    //     minX = Math.min(minX, left);
+    //     minY = Math.min(minY, top);
 
-        maxX = Math.max(
-          maxX,
-          left + node.offsetWidth
-        );
+    //     maxX = Math.max(
+    //       maxX,
+    //       left + node.offsetWidth
+    //     );
 
-        maxY = Math.max(
-          maxY,
-          top + node.offsetHeight
-        );
-      });
+    //     maxY = Math.max(
+    //       maxY,
+    //       top + node.offsetHeight
+    //     );
+    //   });
 
-      const exportWidth =
-        maxX - minX + EXPORT_PADDING * 2;
+    //   const exportWidth =
+    //     maxX - minX + EXPORT_PADDING * 2;
 
-      const exportHeight =
-        maxY - minY + EXPORT_PADDING * 2;
+    //   const exportHeight =
+    //     maxY - minY + EXPORT_PADDING * 2;
 
-      const exportStage =
-        stage.cloneNode(true);
+    //   const exportStage =
+    //     stage.cloneNode(true);
 
-      exportStage.style.position =
-        "fixed";
+    //   exportStage.style.position =
+    //     "fixed";
 
-      exportStage.style.left =
-        "0";
+    //   exportStage.style.left =
+    //     "0";
 
-      exportStage.style.top =
-        "0";
+    //   exportStage.style.top =
+    //     "0";
 
-      exportStage.style.zIndex =
-        "-1";
+    //   exportStage.style.zIndex =
+    //     "-1";
 
-      exportStage.style.pointerEvents =
-        "none";
+    //   exportStage.style.pointerEvents =
+    //     "none";
 
-      exportStage.style.width =
-        `${exportWidth}px`;
+    //   exportStage.style.width =
+    //     `${exportWidth}px`;
 
-      exportStage.style.height =
-        `${exportHeight}px`;
+    //   exportStage.style.height =
+    //     `${exportHeight}px`;
 
-      exportStage.style.overflow =
-        "hidden";
+    //   exportStage.style.overflow =
+    //     "hidden";
 
-      const exportWorld =
-        exportStage.querySelector(
-          ".construct-world"
-        );
+    //   const exportWorld =
+    //     exportStage.querySelector(
+    //       ".construct-world"
+    //     );
 
-      if (!exportWorld) {
-        return;
-      }
+    //   if (!exportWorld) {
+    //     return;
+    //   }
 
-      exportWorld.style.transition =
-        "none";
+    //   exportWorld.style.transition =
+    //     "none";
 
-      exportWorld.style.transform =
-        `translate(${(-minX + EXPORT_PADDING)}px, ${(-minY + EXPORT_PADDING)}px) scale(1)`;
+    //   exportWorld.style.transform =
+    //     `translate(${(-minX + EXPORT_PADDING)}px, ${(-minY + EXPORT_PADDING)}px) scale(1)`;
 
-      document.body.appendChild(exportStage);
+    //   document.body.appendChild(exportStage);
 
-      showExportStatus(
-        "Preparing PNG export..."
-      );
+    //   showExportStatus(
+    //     "Preparing PNG export..."
+    //   );
 
-      await new Promise((resolve) => {
-        requestAnimationFrame(() => {
-          requestAnimationFrame(resolve);
-        });
-      });
+    //   await new Promise((resolve) => {
+    //     requestAnimationFrame(() => {
+    //       requestAnimationFrame(resolve);
+    //     });
+    //   });
 
-      const originalImages =
-        [...document.querySelectorAll(".construct-node img")];
+    //   const originalImages =
+    //     [...document.querySelectorAll(".construct-node img")];
 
-      const exportImages =
-        [...exportStage.querySelectorAll(".construct-node img")];
+    //   const exportImages =
+    //     [...exportStage.querySelectorAll(".construct-node img")];
 
-      await Promise.all(
-        exportImages.map(async (exportImage, index) => {
-          const originalImage =
-            originalImages[index];
+    //   await Promise.all(
+    //     exportImages.map(async (exportImage, index) => {
+    //       const originalImage =
+    //         originalImages[index];
 
-          if (!originalImage?.src) {
-            return;
-          }
+    //       if (!originalImage?.src) {
+    //         return;
+    //       }
 
-          const response =
-            await fetch(originalImage.src);
+    //       const response =
+    //         await fetch(originalImage.src);
 
-          const blob =
-            await response.blob();
+    //       const blob =
+    //         await response.blob();
 
-          const dataUrl =
-            await new Promise((resolve) => {
-              const reader =
-                new FileReader();
+    //       const dataUrl =
+    //         await new Promise((resolve) => {
+    //           const reader =
+    //             new FileReader();
 
-              reader.onload = () => {
-                resolve(reader.result);
-              };
+    //           reader.onload = () => {
+    //             resolve(reader.result);
+    //           };
 
-              reader.readAsDataURL(blob);
-            });
+    //           reader.readAsDataURL(blob);
+    //         });
 
-          exportImage.src =
-            dataUrl;
-        })
-      );
+    //       exportImage.src =
+    //         dataUrl;
+    //     })
+    //   );
 
-      requestAnimationFrame(async () => {
-        try {
-          const dataUrl =
-            await window.htmlToImage.toPng(
-              exportStage,
-              {
-                cacheBust: true,
-                pixelRatio: 2,
-                width: exportWidth,
-                height: exportHeight,
-                canvasWidth: exportWidth * 2,
-                canvasHeight: exportHeight * 2,
-                backgroundColor: "#111111",
-                fontEmbedCSS: "",
-                filter: (node) => {
-                  return !(
-                    node.classList?.contains(
-                      "construct-floating-panel-group"
-                    ) ||
-                    node.classList?.contains(
-                      "construct-presentation-trigger"
-                    )
-                  );
-                },
-              }
-            );
+    //   console.log({
+    //     exportWidth,
+    //     exportHeight,
+    //     canvasWidth: exportWidth * 2,
+    //     canvasHeight: exportHeight * 2
+    //   });
 
-          const response =
-            await fetch(dataUrl);
+    //   requestAnimationFrame(async () => {
+    //     try {
+    //       const dataUrl =
+    //         await window.htmlToImage.toPng(
+    //           exportStage,
+    //           {
+    //             cacheBust: true,
+    //             pixelRatio: 1,
+    //             width: exportWidth,
+    //             height: exportHeight,
+    //             canvasWidth: exportWidth,
+    //             canvasHeight: exportHeight,
+    //             backgroundColor: "#111111",
+    //             fontEmbedCSS: "",
+    //             filter: (node) => {
+    //               return !(
+    //                 node.classList?.contains(
+    //                   "construct-floating-panel-group"
+    //                 ) ||
+    //                 node.classList?.contains(
+    //                   "construct-presentation-trigger"
+    //                 )
+    //               );
+    //             },
+    //           }
+    //         );
 
-          const blob =
-            await response.blob();
+    //       const response =
+    //         await fetch(dataUrl);
 
-          const fileName =
-            `construct-export-${Date.now()}.png`;
+    //       const blob =
+    //         await response.blob();
 
-          if ("showSaveFilePicker" in window) {
-            const handle =
-              await window.showSaveFilePicker({
-                suggestedName:
-                  fileName,
+    //       const fileName =
+    //         `construct-export-${Date.now()}.png`;
 
-                types: [
-                  {
-                    description:
-                      "PNG image",
+    //       if ("showSaveFilePicker" in window) {
+    //         const handle =
+    //           await window.showSaveFilePicker({
+    //             suggestedName:
+    //               fileName,
 
-                    accept: {
-                      "image/png": [
-                        ".png"
-                      ]
-                    }
-                  }
-                ]
-              });
+    //             types: [
+    //               {
+    //                 description:
+    //                   "PNG image",
 
-            const writable =
-              await handle.createWritable();
+    //                 accept: {
+    //                   "image/png": [
+    //                     ".png"
+    //                   ]
+    //                 }
+    //               }
+    //             ]
+    //           });
 
-            await writable.write(blob);
-            await writable.close();
+    //         const writable =
+    //           await handle.createWritable();
 
-            return;
-          }
+    //         await writable.write(blob);
+    //         await writable.close();
 
-          const link =
-            document.createElement("a");
+    //         return;
+    //       }
 
-          link.download =
-            fileName;
+    //       const link =
+    //         document.createElement("a");
 
-          link.href =
-            URL.createObjectURL(blob);
+    //       link.download =
+    //         fileName;
 
-          document.body.appendChild(link);
-          link.click();
-          link.remove();
+    //       link.href =
+    //         URL.createObjectURL(blob);
 
-          URL.revokeObjectURL(link.href);
-        } catch (error) {
-          if (
-            error?.name !== "AbortError"
-          ) {
-            console.error(error);
-          }
-        } finally {
-          hideExportStatus();
+    //       document.body.appendChild(link);
+    //       link.click();
+    //       link.remove();
 
-          exportStage.remove();
-        }
-      });
+    //       URL.revokeObjectURL(link.href);
+    //     } catch (error) {
+    //       if (
+    //         error?.name !== "AbortError"
+    //       ) {
+    //         console.error(error);
+    //       }
+    //     } finally {
+    //       hideExportStatus();
 
-      return;
-    }
+    //       exportStage.remove();
+    //     }
+    //   });
+
+    //   return;
+    // }
   
     if (action === "undo") {
       undo?.();
@@ -1241,3 +1241,11 @@ export async function openGraphFile({
     window.alert("Failed to open graph file.");
   }
 }
+
+
+/* <div class="construct-menu-separator"></div>
+
+    <button class="construct-menu-button" type="button" data-action="export-png">
+      <i data-lucide="image-down"></i>
+      <span>Export PNG</span>
+    </button> */
