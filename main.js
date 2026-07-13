@@ -215,6 +215,8 @@ function updateDocumentTitle() {
     document.title = `About / ${base}`;
   } else if (path.includes("contacts")) {
     document.title = `Contacts / ${base}`;
+  } else if (path.includes("donate")) {
+    document.title = `Donate / ${base}`;
   } else if (path.includes("tools")) {
     document.title = `Tools / ${base}`;
   } else {
