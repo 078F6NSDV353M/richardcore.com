@@ -70,3 +70,42 @@
 .contact-item {
   text-align: center;
 }
+
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+}
+
+.contact-social img {
+  display: block;
+
+  width: 32px;
+  height: 32px;
+}
+
+@media (max-width: 768px) {
+  .contact-socials {
+    gap: 36px;
+  }
+
+  .contact-social {
+    width: 64px;
+    height: 64px;
+  }
+
+  .contact-social img {
+    width: 48px;
+    height: 48px;
+  }
+}
