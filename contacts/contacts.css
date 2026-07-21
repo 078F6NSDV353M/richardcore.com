@@ -87,11 +87,59 @@
   height: 40px;
 }
 
-.contact-social img {
+.contact-socials {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.contact-social {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 40px;
+  height: 40px;
+
+  color: var(--text-primary);
+}
+
+.contact-social-icon {
   display: block;
 
   width: 32px;
   height: 32px;
+
+  background: currentColor;
+
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+  -webkit-mask-size: contain;
+}
+
+.contact-social-icon-instagram {
+  mask-image: url("https://cdn.simpleicons.org/instagram");
+  -webkit-mask-image: url("https://cdn.simpleicons.org/instagram");
+}
+
+.contact-social-icon-threads {
+  mask-image: url("https://cdn.simpleicons.org/threads");
+  -webkit-mask-image: url("https://cdn.simpleicons.org/threads");
+}
+
+.contact-social-icon-telegram {
+  mask-image: url("https://cdn.simpleicons.org/telegram");
+  -webkit-mask-image: url("https://cdn.simpleicons.org/telegram");
+}
+
+.contact-social-icon-youtube {
+  mask-image: url("https://cdn.simpleicons.org/youtube");
+  -webkit-mask-image: url("https://cdn.simpleicons.org/youtube");
 }
 
 @media (max-width: 768px) {
@@ -104,7 +152,7 @@
     height: 64px;
   }
 
-  .contact-social img {
+  .contact-social-icon {
     width: 48px;
     height: 48px;
   }
